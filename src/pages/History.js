@@ -20,7 +20,16 @@ const History = () => {
 
     let countArticle = 0
 
-    return (
+  return (
+
+    <>
+      <HttpClient
+        responseCallBack={setStrResponse}
+        errorCallBack={setError}
+        endpoint={`history/${id}`}
+      />
+      
+      {response && (
         <>
             <HttpClient
                 responseCallBack={setStrResponse}
@@ -54,7 +63,16 @@ const History = () => {
                 </>
             )}
         </>
+<<<<<<< HEAD
     )
 }
 
 export default History
+=======
+      )}
+    </>
+  );
+};
+
+export default History;
+>>>>>>> 5f9fdc7c413c32c8ed3ad34784ba30e40f5a212e

@@ -22,7 +22,14 @@ const RocketsDetails = () => {
     }, [strResponse])
     /** -------------- HTTP CLIENT -------------- **/
 
-    return (
+  return (
+    <>
+      <HttpClient
+        responseCallBack={setStrResponse}
+        errorCallBack={setError}
+        endpoint={`rockets/${id}`}
+      />
+      {response ? (
         <>
             <HttpClient
                 responseCallBack={setStrResponse}
@@ -80,7 +87,12 @@ const RocketsDetails = () => {
                 <div>The rocket does not exist</div>
             )}
         </>
-    )
-}
+      ) : (
+        <div>The rocket does not exist</div>
+      )}
+
+    </>
+  );
+};
 
 export default RocketsDetails
