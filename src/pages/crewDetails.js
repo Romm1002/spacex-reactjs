@@ -1,13 +1,13 @@
-import React from "react";
-import "../assets/styles/style.css";
-import CrewMemberPage from "../components/CrewDetails";
+import React from 'react'
+import '../assets/styles/style.css'
+import CrewMemberPage from '../components/CrewDetails'
 
 function CrewDetails() {
-  return (
-    <main className="container">
-      <CrewMemberPage />
-    </main>
-  );
+    return (
+        <main className='container'>
+            <CrewMemberPage />
+        </main>
+    )
 }
 
-export default CrewDetails;
+export default CrewDetails

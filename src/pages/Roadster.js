@@ -1,7 +1,7 @@
+import React, { useState, useEffect } from 'react'
 import HttpClient from '../components/HttpClient'
-import { useEffect, useState } from 'react'
 
-function CompanyPage() {
+const Roadster = () => {
     /** -------------- HTTP CLIENT -------------- **/
     const [error, setError] = useState(null)
     const [strResponse, setStrResponse] = useState(null)
@@ -10,7 +10,7 @@ function CompanyPage() {
     // Convert strResponse to object
     useEffect(() => {
         setResponse(JSON.parse(strResponse))
-    }, strResponse)
+    }, [strResponse])
 
     /** -------------- HTTP CLIENT -------------- **/
 
@@ -19,12 +19,15 @@ function CompanyPage() {
             <HttpClient
                 responseCallBack={setStrResponse}
                 errorCallBack={setError}
-                endpoint='company'
+                endpoint='roadster'
             />
-
-            <p>{response != null ? response.name : null}</p>
+            {response && (
+                <>
+                    <h1>{response.name}</h1>
+                </>
+            )}
         </>
     )
 }
 
-export default CompanyPage
+export default Roadster

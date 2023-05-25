@@ -1,25 +1,25 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
 const CrewSearchComponent = ({ onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState("");
+    const [searchTerm, setSearchTerm] = useState('')
 
-  const handleSearch = (event) => {
-    setSearchTerm(event.target.value);
-    onSearch(event.target.value);
-  };
+    const handleSearch = (event) => {
+        setSearchTerm(event.target.value)
+        onSearch(event.target.value)
+    }
 
-  return (
-    <div>
-      <input
-        className="form-control"
-        type="search"
-        placeholder="Search for an astronaut..."
-        value={searchTerm}
-        onChange={handleSearch}
-        style={{ width: "350px" }}
-      />
-    </div>
-  );
-};
+    return (
+        <div>
+            <input
+                className='form-control'
+                type='search'
+                placeholder='Search for an astronaut...'
+                value={searchTerm}
+                onChange={handleSearch}
+                style={{ width: '350px' }}
+            />
+        </div>
+    )
+}
 
-export default CrewSearchComponent;
+export default CrewSearchComponent
