@@ -47,7 +47,7 @@ const RocketsDetails = () => {
                 <img
                   className="d-block w-100"
                   src={item}
-                  alt={`Image ${index}`}
+                  alt={`${index}`}
                   style={{ height: "250px", objectFit: "cover" }}
                 />
               </Carousel.Item>

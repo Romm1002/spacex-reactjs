@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Layout from "../components/layout/layout";
-import Home from "../pages/home";
-import NoMatch from "./noMatch";
+import Layout from "../components/layout/Layout";
+import Home from "../pages/Home";
+import NoMatch from "./NoMatch";
 import CompanyPage from "../pages/CompanyPage";
 import ListHistory from "../pages/ListHistory";
 import History from "../pages/History";
-import CrewDetails from "../pages/crewDetails";
-import RocketsQuequette from "../pages/Rockets";
+import CrewDetails from "../pages/CrewDetails";
+import Rockets from "../pages/Rockets";
 import RocketsDetails from "../pages/RocketsDetails";
 
 const Routeur = () => {

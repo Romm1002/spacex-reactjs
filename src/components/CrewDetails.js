@@ -48,7 +48,7 @@ const CrewMemberPage = () => {
               <b>Agence :</b> {agency}
             </ListGroup.Item>
             <ListGroup.Item>
-              <b>Status :</b> {status == "active" ? "Actif" : ""}
+              <b>Status :</b> {status === "active" ? "Actif" : ""}
             </ListGroup.Item>
             <ListGroup.Item>
               <b>Wikipédia :</b> <a href={wikipedia}>Accéder</a>
