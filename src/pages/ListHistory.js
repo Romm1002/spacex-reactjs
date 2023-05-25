@@ -18,6 +18,8 @@ const ListHistory = () => {
   /** -------------- HTTP CLIENT -------------- **/
 
   return (
+    <div className="container">
+
     <>
       <HttpClient
         responseCallBack={setStrResponse}
@@ -43,7 +45,7 @@ const ListHistory = () => {
           </Row>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,62 +1,69 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
+import HttpClient from "./HttpClient";
 
 const CrewMemberPage = () => {
   const { id } = useParams();
-  const apiUrl = `https://api.spacexdata.com/v4/crew/${id}`;
-  const [memberData, setMemberData] = useState(null);
 
+  /** -------------- HTTP CLIENT -------------- **/
+  // eslint-disable-next-line
+  const [error, setError] = useState(null);
+  const [strResponse, setStrResponse] = useState(null);
+  const [response, setResponse] = useState(null);
+
+  // Convert strResponse to object
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(apiUrl);
-        setMemberData(response.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchData();
-  }, [apiUrl]);
-
-  if (!memberData) {
-    return <div>Le membre n'existe pas</div>;
-  }
-
-  const { name, agency, status, image, wikipedia } = memberData;
+    setResponse(JSON.parse(strResponse));
+  }, [strResponse]);
+  /** -------------- HTTP CLIENT -------------- **/
 
   return (
-    <div>
-      <Link to="/">
-        <Button variant="secondary" className="my-3">
-          Retour
-        </Button>
-      </Link>
-      <div className="w-100 d-flex justify-content-center align-items-center">
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={image} alt={name} />
-          <Card.Body>
-            <Card.Title>{name}</Card.Title>
-          </Card.Body>
-          <ListGroup className="list-group-flush">
-            <ListGroup.Item>
-              <b>Agence :</b> {agency}
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <b>Status :</b> {status === "active" ? "Actif" : ""}
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <b>Wikipédia :</b> <a href={wikipedia}>Accéder</a>
-            </ListGroup.Item>
-          </ListGroup>
-        </Card>
-      </div>
-    </div>
+    <>
+      <HttpClient
+        responseCallBack={setStrResponse}
+        errorCallBack={setError}
+        endpoint={`crew/${id}`}
+      />
+      {response ? (
+        <div>
+          <Link to="/">
+            <Button variant="secondary" className="my-3">
+              Back
+            </Button>
+          </Link>
+          <div className="w-100 d-flex justify-content-center align-items-center">
+            <Card style={{ width: "18rem" }}>
+              <Card.Img
+                variant="top"
+                src={response.image}
+                alt={response.name}
+              />
+              <Card.Body>
+                <Card.Title>{response.name}</Card.Title>
+              </Card.Body>
+              <ListGroup className="list-group-flush">
+                <ListGroup.Item>
+                  <b>Agency :</b> {response.agency}
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <b>Status :</b> {response.status === "active" ? "Actif" : ""}
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <b>Wikipedia :</b> <a href={response.wikipedia}>Go to</a>
+                </ListGroup.Item>
+              </ListGroup>
+            </Card>
+          </div>
+        </div>
+      ) : (
+        <div>The member does't exist</div>
+      )}
+    </>
+
   );
 };
 

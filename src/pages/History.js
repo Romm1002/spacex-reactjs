@@ -21,6 +21,7 @@ const History = () => {
   let countArticle = 0;
 
   return (
+
     <>
       <HttpClient
         responseCallBack={setStrResponse}

@@ -13,7 +13,7 @@ const CrewSearchComponent = ({ onSearch }) => {
       <input
         className="form-control"
         type="search"
-        placeholder="Rechercher un astronaute..."
+        placeholder="Search for an astronaut..."
         value={searchTerm}
         onChange={handleSearch}
         style={{ width: "350px" }}
