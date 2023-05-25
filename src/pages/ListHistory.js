@@ -17,18 +17,17 @@ const ListHistory = () => {
 
     /** -------------- HTTP CLIENT -------------- **/
 
-  return (
-    <div className="container">
+    return (
+        <div className='container'>
+            <>
+                <HttpClient
+                    responseCallBack={setStrResponse}
+                    errorCallBack={setError}
+                    endpoint='history'
+                />
 
-    <>
-      <HttpClient
-        responseCallBack={setStrResponse}
-        errorCallBack={setError}
-        endpoint="history"
-      />
-
-      <div className="App-history mt-5">
-        <h1>History of Space X</h1>
+                <div className='App-history mt-5'>
+                    <h1>History of Space X</h1>
 
                     <div></div>
 

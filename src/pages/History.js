@@ -20,16 +20,7 @@ const History = () => {
 
     let countArticle = 0
 
-  return (
-
-    <>
-      <HttpClient
-        responseCallBack={setStrResponse}
-        errorCallBack={setError}
-        endpoint={`history/${id}`}
-      />
-      
-      {response && (
+    return (
         <>
             <HttpClient
                 responseCallBack={setStrResponse}
@@ -39,33 +30,41 @@ const History = () => {
 
             {response && (
                 <>
-                    <Link to='/history'>
-                        <div className='container ms-5 mt-5'>
-                            <Button variant='secondary'>Retour</Button>
-                        </div>
-                    </Link>
-                    <div className='App-history'>
-                        <h1 className='mt-5'>{response.title}</h1>
+                    <HttpClient
+                        responseCallBack={setStrResponse}
+                        errorCallBack={setError}
+                        endpoint={`history/${id}`}
+                    />
 
-                        <h5 className='mt-5'>{response.details}</h5>
-
-                        <p className='mt-5'>{FormatDate(response.event_date_unix)}</p>
-
-                        {response.links &&
-                            Object.values(response.links).map((link, id) => (
-                                <div key={id} className='mt-5'>
-                                    <p>
-                                        article {++countArticle} : <a href={link}>{link}</a>
-                                    </p>
+                    {response && (
+                        <>
+                            <Link to='/history'>
+                                <div className='container ms-5 mt-5'>
+                                    <Button variant='secondary'>Retour</Button>
                                 </div>
-                            ))}
-                    </div>
+                            </Link>
+                            <div className='App-history'>
+                                <h1 className='mt-5'>{response.title}</h1>
+
+                                <h5 className='mt-5'>{response.details}</h5>
+
+                                <p className='mt-5'>{FormatDate(response.event_date_unix)}</p>
+
+                                {response.links &&
+                                    Object.values(response.links).map((link, id) => (
+                                        <div key={id} className='mt-5'>
+                                            <p>
+                                                article {++countArticle} : <a href={link}>{link}</a>
+                                            </p>
+                                        </div>
+                                    ))}
+                            </div>
+                        </>
+                    )}
                 </>
             )}
         </>
-      )}
-    </>
-  );
-};
+    )
+}
 
-export default History;
+export default History
