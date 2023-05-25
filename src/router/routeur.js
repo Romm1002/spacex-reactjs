@@ -7,7 +7,7 @@ import CompanyPage from "../pages/CompanyPage";
 import ListHistory from "../pages/ListHistory";
 import History from "../pages/History";
 import CrewDetails from "../pages/CrewDetails";
-import RocketsQuequette from "../pages/Rockets";
+import Rockets from "../pages/Rockets";
 import RocketsDetails from "../pages/RocketsDetails";
 
 const Routeur = () => {
