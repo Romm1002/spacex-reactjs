@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
 
       <main>{children}</main>
 
-      <footer>FOOTER</footer>
+      <footer>SpaceX par Corentin, Nathan & Romain</footer>
     </>
   );
 };
