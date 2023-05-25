@@ -1,29 +1,30 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import CardHistory from "../components/CardHistory";
 import { Row } from "react-bootstrap";
+import HttpClient from "../components/HttpClient";
 // Recupérer l'api
 
 const ListHistory = () => {
-  const [data, setData] = useState([]);
+  /** -------------- HTTP CLIENT -------------- **/
+  const [error, setError] = useState(null);
+  const [strResponse, setStrResponse] = useState(null);
+  const [response, setResponse] = useState(null);
 
+  // Convert strResponse to object
   useEffect(() => {
-    fetchData("https://api.spacexdata.com/v4/history");
-  }, []);
+    setResponse(JSON.parse(strResponse));
+  }, [strResponse]);
 
-  const fetchData = async (url) => {
-    try {
-      const response = await axios.get(url);
-      setData(response.data);
-    } catch (error) {
-      // gestion des erreurs
-    }
-  };
-
-  console.log(data);
+  /** -------------- HTTP CLIENT -------------- **/
 
   return (
     <>
+      <HttpClient
+        responseCallBack={setStrResponse}
+        errorCallBack={setError}
+        endpoint="history"
+      />
+
       <div className="App-history mt-5">
         <h1>History of Space X</h1>
 
@@ -31,9 +32,14 @@ const ListHistory = () => {
 
         <div className="container mt-5">
           <Row>
-            {data.map((datum) => {
-              return <CardHistory history={datum} />;
-            })}
+            {response &&
+              response.map((datum, id) => {
+                return (
+                  <>
+                    <CardHistory key={id} history={datum} id={id} />
+                  </>
+                );
+              })}
           </Row>
         </div>
       </div>
