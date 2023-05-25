@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Layout from "../components/layout/Layout";
 import Home from "../pages/Home";
-import NoMatch from "./noMatch";
+import NoMatch from "./NoMatch";
 import ListHistory from "../pages/ListHistory";
 import History from "../pages/History";
 import CrewDetails from "../pages/CrewDetails";
