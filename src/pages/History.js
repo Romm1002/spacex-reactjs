@@ -63,16 +63,9 @@ const History = () => {
                 </>
             )}
         </>
-<<<<<<< HEAD
-    )
-}
-
-export default History
-=======
       )}
     </>
   );
 };
 
 export default History;
->>>>>>> 5f9fdc7c413c32c8ed3ad34784ba30e40f5a212e
