@@ -9,13 +9,14 @@ const CrewSearchComponent = ({ onSearch }) => {
   };
 
   return (
-    <div className="mb-4">
+    <div>
       <input
         className="form-control"
-        type="text"
+        type="search"
         placeholder="Rechercher un astronaute..."
         value={searchTerm}
         onChange={handleSearch}
+        style={{ width: "350px" }}
       />
     </div>
   );

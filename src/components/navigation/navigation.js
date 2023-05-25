@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/img/logo.png";
 
-
 const Navigation = () => {
   return (
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="/">
           <img

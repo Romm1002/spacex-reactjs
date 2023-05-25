@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import ListGroup from "react-bootstrap/ListGroup";
 
 const CrewMemberPage = () => {
   const { id } = useParams();
@@ -24,17 +28,34 @@ const CrewMemberPage = () => {
     return <div>Le membre n'existe pas</div>;
   }
 
-  const { name, agency, image, status, wikipedia } = memberData;
+  const { name, agency, status, image, wikipedia } = memberData;
 
   return (
     <div>
-      <h1>{name}</h1>
-      <p>Agency: {agency}</p>
-      <img src={image} alt={name} style={{ width: "200px" }} />
-      <p>Status: {status}</p>
-      <p>
-        Page wiki : <a href={wikipedia}>{wikipedia}</a>
-      </p>
+      <Link to="/">
+        <Button variant="secondary" className="my-3">
+          Retour
+        </Button>
+      </Link>
+      <div className="w-100 d-flex justify-content-center align-items-center">
+        <Card style={{ width: "18rem" }}>
+          <Card.Img variant="top" src={image} alt={name} />
+          <Card.Body>
+            <Card.Title>{name}</Card.Title>
+          </Card.Body>
+          <ListGroup className="list-group-flush">
+            <ListGroup.Item>
+              <b>Agence :</b> {agency}
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <b>Status :</b> {status == "active" ? "Actif" : ""}
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <b>Wikipédia :</b> <a href={wikipedia}>Accéder</a>
+            </ListGroup.Item>
+          </ListGroup>
+        </Card>
+      </div>
     </div>
   );
 };

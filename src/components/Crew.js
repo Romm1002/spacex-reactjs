@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import CrewSearch from "./CrewSearch";
+import Card from "react-bootstrap/Card";
 
 const CrewComponent = () => {
   const apiUrl = "https://api.spacexdata.com/v4/crew";
@@ -31,25 +32,32 @@ const CrewComponent = () => {
 
   return (
     <div>
-      <h1>Les astronautes de SpaceX</h1>
+      <div className="d-flex align-items-center justify-content-between my-4">
+        <h1>Les astronautes de SpaceX</h1>
+        <CrewSearch onSearch={handleSearch} />
+      </div>
       <div className="row justify-content-around">
-      <CrewSearch onSearch={handleSearch} />
         {filteredCrew.map((member) => (
           <Link
             key={member.id}
             to={`member/${member.id}`}
             className="card bg-light mb-4"
-            style={{ width: "18rem", padding: "0", height: "auto" }}
+            style={{
+              width: "18rem",
+              padding: "0",
+              height: "auto",
+              textDecoration: "none",
+            }}
           >
-            <img
+            <Card.Img
               src={member.image}
-              className="card-img-top"
+              variant="top"
               alt={member.name}
               style={{ objectFit: "cover", height: "350px" }}
             />
-            <div className="card-body">
-              <h5 className="card-title">{member.name}</h5>
-            </div>
+            <Card.Body>
+              <Card.Title>{member.name}</Card.Title>
+            </Card.Body>
           </Link>
         ))}
       </div>
