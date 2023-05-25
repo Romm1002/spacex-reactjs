@@ -1,28 +1,30 @@
 import HttpClient from "../components/HttpClient";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 function CompanyPage() {
-    /** -------------- HTTP CLIENT -------------- **/
-    const [error, setError] = useState(null);
-    const [strResponse, setStrResponse] = useState(null);
-    const [response, setResponse] = useState(null);
+  /** -------------- HTTP CLIENT -------------- **/
+  const [error, setError] = useState(null);
+  const [strResponse, setStrResponse] = useState(null);
+  const [response, setResponse] = useState(null);
 
-    // Convert strResponse to object
-    useEffect(() => {
-        setResponse(JSON.parse(strResponse));
-    }, strResponse);
-    
-    /** -------------- HTTP CLIENT -------------- **/
+  // Convert strResponse to object
+  useEffect(() => {
+    setResponse(JSON.parse(strResponse));
+  }, strResponse);
 
-    return (
-        <>
-            <HttpClient responseCallBack={setStrResponse} errorCallBack={setError} endpoint="company" />
+  /** -------------- HTTP CLIENT -------------- **/
 
-            <p>{ response != null ? response.name : null}</p>
+  return (
+    <>
+      <HttpClient
+        responseCallBack={setStrResponse}
+        errorCallBack={setError}
+        endpoint="company"
+      />
 
-
-        </>
-    )
+      <p>{response != null ? response.name : null}</p>
+    </>
+  );
 }
 
-export default CompanyPage
+export default CompanyPage;
