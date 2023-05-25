@@ -78,6 +78,7 @@ const RocketsDetails = () => {
       ) : (
         <div>The rocket does not exist</div>
       )}
+
     </>
   );
 };

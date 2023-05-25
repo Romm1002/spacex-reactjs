@@ -1,59 +1,60 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router";
-import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import FormatDate from "../utils/FormatDate";
+import HttpClient from "../components/HttpClient";
 
 const History = () => {
-  const [data, setData] = useState([]);
   const { id } = useParams();
+  /** -------------- HTTP CLIENT -------------- **/
+  const [error, setError] = useState(null);
+  const [strResponse, setStrResponse] = useState(null);
+  const [response, setResponse] = useState(null);
 
+  // Convert strResponse to object
   useEffect(() => {
-    fetchData(`https://api.spacexdata.com/v4/history/${id}`);
-  }, []);
+    setResponse(JSON.parse(strResponse));
+  }, [strResponse]);
 
-  const fetchData = async (url) => {
-    try {
-      const response = await axios.get(url);
-      setData(response.data);
-    } catch (error) {
-      // gestion des erreurs
-    }
-  };
+  /** -------------- HTTP CLIENT -------------- **/
 
   let countArticle = 0;
 
-  if (data.links) {
-    Object.values(data.links).map((link) => {
-      console.log(link);
-    });
-  }
-
   return (
-    <div className="container text-center">
-      <Link to="/history">
-        <div className="container ms-5 mt-5">
-          <Button variant="secondary">Back</Button>
-        </div>
-      </Link>
-      <div className="App-history">
-        <h1 className="mt-5">{data.title}</h1>
 
-        <h5 className="mt-5">{data.details}</h5>
-
-        <p className="mt-5">{FormatDate(data.event_date_unix)}</p>
-
-        {data.links &&
-          Object.values(data.links).map((link, id) => (
-            <div key={id} className="mt-5">
-              <p>
-                article {++countArticle} : <a href={link}>{link}</a>
-              </p>
+    <>
+      <HttpClient
+        responseCallBack={setStrResponse}
+        errorCallBack={setError}
+        endpoint={`history/${id}`}
+      />
+      
+      {response && (
+        <>
+          <Link to="/history">
+            <div className="container ms-5 mt-5">
+              <Button variant="secondary">Retour</Button>
             </div>
-          ))}
-      </div>
-    </div>
+          </Link>
+          <div className="App-history">
+            <h1 className="mt-5">{response.title}</h1>
+
+            <h5 className="mt-5">{response.details}</h5>
+
+            <p className="mt-5">{FormatDate(response.event_date_unix)}</p>
+
+            {response.links &&
+              Object.values(response.links).map((link, id) => (
+                <div key={id} className="mt-5">
+                  <p>
+                    article {++countArticle} : <a href={link}>{link}</a>
+                  </p>
+                </div>
+              ))}
+          </div>
+        </>
+      )}
+    </>
   );
 };
 
