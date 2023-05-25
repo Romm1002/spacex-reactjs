@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Layout from "../components/layout/layout";
-import Home from "../pages/home";
-import NoMatch from "./noMatch";
-import CrewDetails from "../pages/crewDetails";
+import Layout from "../components/layout/Layout";
+import Home from "../pages/Home";
+import NoMatch from "./NoMatch";
+import CrewDetails from "../pages/CrewDetails";
 import Rockets from "../pages/Rockets";
 import RocketsDetails from "../pages/RocketsDetails";
 

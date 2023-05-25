@@ -1,4 +1,4 @@
-import Navigation from "../navigation/navigation";
+import Navigation from "../navigation/Navigation";
 
 const Layout = ({ children }) => {
   return (

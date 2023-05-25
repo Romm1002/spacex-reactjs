@@ -3,7 +3,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Carousel from "react-bootstrap/Carousel";
-import Accordion from "react-bootstrap/Accordion";
 import Button from "react-bootstrap/Button";
 
 const Rockets = () => {
@@ -47,7 +46,7 @@ const Rockets = () => {
                   <img
                     className="d-block w-100"
                     src={item}
-                    alt={`Image ${index}`}
+                    alt={`${index}`}
                     style={{ height: "250px", objectFit: "cover" }}
                   />
                 </Carousel.Item>
