@@ -37,6 +37,11 @@ const Navigation = () => {
                 Fusées
               </Link>
             </li>
+            <li class="nav-item">
+              <Link to="/history" className="nav-link" aria-current="page">
+                Histoire
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

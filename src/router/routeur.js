@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "../components/layout/layout";
 import Home from "../pages/home";
 import NoMatch from "./noMatch";
+import ListHistory from "../pages/ListHistory";
+import History from "../pages/History";
 import CrewDetails from "../pages/crewDetails";
 import Rockets from "../pages/Rockets";
 import RocketsDetails from "../pages/RocketsDetails";
@@ -13,6 +15,8 @@ const Routeur = () => {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />}></Route>
+          <Route path="/history" element={<ListHistory />}></Route>
+          <Route path="/history/:id" element={<History />}></Route>
           <Route path="/member/:id" element={<CrewDetails />}></Route>
           <Route path="/rockets" element={<Rockets />}></Route>
           <Route path="/rockets/:id" element={<RocketsDetails />}></Route>
