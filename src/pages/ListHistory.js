@@ -23,8 +23,8 @@ const ListHistory = () => {
   console.log(data);
 
   return (
-    <>
-      <div className="App-history mt-5">
+    <div className="container">
+      <div className="mt-5">
         <h1>History of Space X</h1>
 
         <div></div>
@@ -37,7 +37,7 @@ const ListHistory = () => {
           </Row>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

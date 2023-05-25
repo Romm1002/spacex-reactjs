@@ -31,10 +31,10 @@ const History = () => {
   }
 
   return (
-    <>
+    <div className="container text-center">
       <Link to="/history">
         <div className="container ms-5 mt-5">
-          <Button variant="secondary">Retour</Button>
+          <Button variant="secondary">Back</Button>
         </div>
       </Link>
       <div className="App-history">
@@ -53,7 +53,7 @@ const History = () => {
             </div>
           ))}
       </div>
-    </>
+    </div>
   );
 };
 
