@@ -9,6 +9,7 @@ import History from "../pages/History";
 import CrewDetails from "../pages/CrewDetails";
 import Rockets from "../pages/Rockets";
 import RocketsDetails from "../pages/RocketsDetails";
+import Roadster from "../pages/Roadster";
 
 const Routeur = () => {
   return (
@@ -22,6 +23,7 @@ const Routeur = () => {
           <Route path="/member/:id" element={<CrewDetails />}></Route>
           <Route path="/rockets" element={<Rockets />}></Route>
           <Route path="/rockets/:id" element={<RocketsDetails />}></Route>
+          <Route path="/roadster" element={<Roadster />}></Route>
           <Route path="*" element={<NoMatch />}></Route>
         </Routes>
       </Layout>
