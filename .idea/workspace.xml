@@ -5,42 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="080d07d7-e6dd-4e3a-94de-4cb99c8a415b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/d/3df767679524c4a5a17a0162c877d409ab65ad98" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/6/661fb8dcdfc44557247e813bf716266137ad4ac3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/8/f88e17193d91c101c7e0bd70b2fc4123066b1147" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/d/3df767679524c4a5a17a0162c877d409ab65ad98" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/6/661fb8dcdfc44557247e813bf716266137ad4ac3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/8/f88e17193d91c101c7e0bd70b2fc4123066b1147" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Crew.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Crew.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CrewDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CrewDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CrewSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CrewSearch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HttpClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HttpClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Rockets.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Rockets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RocketsDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RocketsDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ThemeMode.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ThemeMode.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/layout.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/CompanyPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CompanyPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/CrewDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CrewDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/History.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/History.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ListHistory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ListHistory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Roadster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Roadster.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Rockets.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Rockets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/RocketsDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RocketsDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/NoMatch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/NoMatch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigation/navigation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/crewDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/Routeur.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/Routeur.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/VideoPlayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/VideoPlayer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/noMatch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/routeur.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,21 +46,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/CM/search__company__filter",
-    "last_opened_file_path": "C:/wamp/www/React/spacex-reactjs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/wamp/www/React/spacex-reactjs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -105,6 +80,8 @@
       <updated>1684999156378</updated>
       <workItem from="1684999157850" duration="1059000" />
       <workItem from="1685083670720" duration="1872000" />
+      <workItem from="1685092011971" duration="344000" />
+      <workItem from="1685092426507" duration="1749000" />
     </task>
     <servers />
   </component>

@@ -50,6 +50,9 @@ body.dark-mode nav a {
 body.dark-mode nav a:hover {
     color: #e7e7e7;
 }
+body.dark-mode .card {
+    background-color: rgb(26, 26, 26);
+}
 body.dark-mode .card-body {
     background-color: rgb(26, 26, 26);
 }
@@ -130,6 +133,36 @@ body.dark-mode a {
 }
 
 body.dark-mode .roadster {
-  background-color: rgb(26, 26, 26);
-  color: white;
+    background-color: rgb(26, 26, 26);
+    color: white;
+}
+body.dark-mode .list-group-item {
+    background-color: rgb(33, 37, 41);
+}
+
+body.dark-mode .list-group-item-action:hover {
+    background-color: rgb(43, 47, 51);
+    color: #fff;
+}
+
+body.dark-mode .list-group-item-action:active {
+    background-color: rgb(53, 57, 61);
+    color: #fff;
+}
+
+/* ---------- COMPANY PAGE ---------- */
+body.dark-mode #company-wrapper {
+    color: rgb(248, 24, 250);
+}
+
+body.dark-mode #company-wrapper .card {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode #company-wrapper .card-body {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode #company-wrapper a {
+    background-color: #2a2a2a;
 }

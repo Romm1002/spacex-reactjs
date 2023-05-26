@@ -53,6 +53,11 @@ const Navigation = () => {
                                 About us
                             </Link>
                         </li>
+                        <li className='nav-item'>
+                            <Link to='/quiz' className='nav-link' aria-current='page'>
+                                Quiz
+                            </Link>
+                        </li>
                     </ul>
                 </div>
                 <ThemeMode />
