@@ -94,7 +94,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/CM/quizz__style&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/wamp/www/React/spacex-reactjs&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -125,6 +125,7 @@
       <workItem from="1685083670720" duration="1872000" />
       <workItem from="1685092011971" duration="344000" />
       <workItem from="1685092426507" duration="1749000" />
+      <workItem from="1685095485743" duration="1798000" />
       <workItem from="1685095085137" duration="365000" />
     </task>
     <servers />
