@@ -1,32 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
 import Carousel from 'react-bootstrap/Carousel'
 import Button from 'react-bootstrap/Button'
 import HttpClient from './HttpClient'
 import Error from '../error/Error'
+import ApiContext from '../utils/ApiContext'
 
 const Rockets = () => {
-    /** -------------- HTTP CLIENT -------------- **/
-    // eslint-disable-next-line
-    const [error, setError] = useState(null)
-    const [strResponse, setStrResponse] = useState(null)
-    const [response, setResponse] = useState(null)
-
-    // Convert strResponse to object
-    useEffect(() => {
-        setResponse(JSON.parse(strResponse))
-    }, [strResponse])
-
-    /** -------------- HTTP CLIENT -------------- **/
+    const { response, error, reset } = useContext(ApiContext)
 
     return (
         <>
-            <HttpClient
-                responseCallBack={setStrResponse}
-                errorCallBack={setError}
-                endpoint='rockets'
-            />
+            <HttpClient endpoint='rockets' />
 
             {error && (
                 <>
@@ -76,7 +62,7 @@ const Rockets = () => {
                                         <b>Mass :</b> {rocket.mass.kg.toLocaleString()} kg
                                     </p>
                                 </Card.Body>
-                                <Link key={rocket.id} to={`${rocket.id}`}>
+                                <Link key={rocket.id} onClick={reset} to={`${rocket.id}`}>
                                     <Button variant='info' className='my-3 mx-3'>
                                         More information
                                     </Button>

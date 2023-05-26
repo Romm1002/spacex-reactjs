@@ -1,34 +1,21 @@
-import React, { useState, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Button } from 'react-bootstrap'
 import FormatDate from '../utils/FormatDate'
 import HttpClient from '../components/HttpClient'
 import Error from '../error/Error'
+import ApiContext from '../utils/ApiContext'
 
 const History = () => {
     const { id } = useParams()
-    /** -------------- HTTP CLIENT -------------- **/
-    // eslint-disable-next-line
-    const [error, setError] = useState(null)
-    const [strResponse, setStrResponse] = useState(null)
-    const [response, setResponse] = useState(null)
 
-    // Convert strResponse to object
-    useEffect(() => {
-        setResponse(JSON.parse(strResponse))
-    }, [strResponse])
-
-    /** -------------- HTTP CLIENT -------------- **/
+    const { response, error, reset } = useContext(ApiContext)
 
     let countArticle = 0
 
     return (
         <>
-            <HttpClient
-                responseCallBack={setStrResponse}
-                errorCallBack={setError}
-                endpoint={`history/${id}`}
-            />
+            <HttpClient endpoint={`history/${id}`} />
 
             {error && (
                 <>
@@ -38,12 +25,12 @@ const History = () => {
 
             {response && (
                 <>
-                    <Link to='/history'>
-                        <div className='container ms-5 mt-5'>
+                    <div className='container ms-5 mt-5'>
+                        <Link to='/history' onClick={reset}>
                             <Button variant='secondary'>Retour</Button>
-                        </div>
-                    </Link>
-                    <div>
+                        </Link>
+                    </div>
+                    <div className='App-history'>
                         <h1 className='mt-5'>{response.title}</h1>
 
                         <h5 className='mt-5'>{response.details}</h5>

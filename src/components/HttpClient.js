@@ -4,12 +4,12 @@ import ApiContext from '../utils/ApiContext'
 
 const HttpClient = ({ endpoint }) => {
     const URL = process.env.REACT_APP_API_BASE_URL + endpoint
-    const { setResponse, setError } = useContext(ApiContext)
+    const { setResponse, setError, refreshApi } = useContext(ApiContext)
 
     useEffect(() => {
         fetchData()
         // eslint-disable-next-line
-    }, [])
+    }, [refreshApi])
 
     const fetchData = async () => {
         try {

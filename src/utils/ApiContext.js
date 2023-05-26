@@ -5,6 +5,9 @@ const ApiContext = createContext({
     error: null,
     setResponse: () => {},
     setError: () => {},
+    refreshApi: null,
+    setRefreshApi: () => {},
+    reset: () => {},
 })
 
 export default ApiContext

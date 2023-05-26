@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
@@ -7,29 +7,16 @@ import Carousel from 'react-bootstrap/Carousel'
 import Accordion from 'react-bootstrap/Accordion'
 import HttpClient from './HttpClient'
 import Error from '../error/Error'
+import ApiContext from '../utils/ApiContext'
 
 const RocketsDetails = () => {
     const { id } = useParams()
 
-    /** -------------- HTTP CLIENT -------------- **/
-    // eslint-disable-next-line
-    const [error, setError] = useState(null)
-    const [strResponse, setStrResponse] = useState(null)
-    const [response, setResponse] = useState(null)
-
-    // Convert strResponse to object
-    useEffect(() => {
-        setResponse(JSON.parse(strResponse))
-    }, [strResponse])
-    /** -------------- HTTP CLIENT -------------- **/
+    const { response, error, reset } = useContext(ApiContext)
 
     return (
         <>
-            <HttpClient
-                responseCallBack={setStrResponse}
-                errorCallBack={setError}
-                endpoint={`rockets/${id}`}
-            />
+            <HttpClient endpoint={`rockets/${id}`} />
 
             {error && (
                 <>
@@ -39,7 +26,7 @@ const RocketsDetails = () => {
 
             {response ? (
                 <>
-                    <Link to='/rockets'>
+                    <Link to='/rockets' onClick={reset}>
                         <Button variant='secondary' className='my-3'>
                             Back
                         </Button>

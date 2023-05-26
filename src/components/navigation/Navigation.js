@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom'
 import logo from '../../assets/img/logo.png'
 import ThemeMode from '../ThemeMode'
+import { useContext } from 'react'
+import ApiContext from '../../utils/ApiContext'
 
 const Navigation = () => {
+    const { reset } = useContext(ApiContext)
+
     return (
         <nav className='navbar navbar-expand-lg'>
             <div className='container'>
@@ -29,32 +33,57 @@ const Navigation = () => {
                 <div className='collapse navbar-collapse' id='navbarSupportedContent'>
                     <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
                         <li className='nav-item'>
-                            <Link to='/' className='nav-link' aria-current='page'>
+                            <Link to='/' onClick={reset} className='nav-link' aria-current='page'>
                                 Members
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/rockets' className='nav-link' aria-current='page'>
+                            <Link
+                                to='/rockets'
+                                onClick={reset}
+                                className='nav-link'
+                                aria-current='page'
+                            >
                                 Rockets
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/history' className='nav-link' aria-current='page'>
+                            <Link
+                                to='/history'
+                                onClick={reset}
+                                className='nav-link'
+                                aria-current='page'
+                            >
                                 History
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/roadster' className='nav-link' aria-current='page'>
+                            <Link
+                                to='/roadster'
+                                onClick={reset}
+                                className='nav-link'
+                                aria-current='page'
+                            >
                                 Roadster
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/company' className='nav-link' aria-current='page'>
+                            <Link
+                                to='/company'
+                                onClick={reset}
+                                className='nav-link'
+                                aria-current='page'
+                            >
                                 About us
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/quiz' className='nav-link' aria-current='page'>
+                            <Link
+                                to='/quiz'
+                                onClick={reset}
+                                className='nav-link'
+                                aria-current='page'
+                            >
                                 Quiz
                             </Link>
                         </li>

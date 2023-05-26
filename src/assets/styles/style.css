@@ -35,6 +35,15 @@ footer {
     font-size: calc(10px + 2vmin);
 }
 
+.App-history {
+    min-height: 82vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+}
+
 body.dark-mode {
     background-color: #2a2a2a;
     color: #fff;
@@ -59,9 +68,6 @@ body.dark-mode .card-body {
 }
 body.dark-mode .card-body * {
     color: #fff;
-}
-body.dark-mode a {
-    background-color: rgb(26, 26, 26);
 }
 
 .card-crew {
@@ -139,11 +145,17 @@ body.dark-mode .roadster {
 }
 body.dark-mode .list-group-item {
     background-color: rgb(33, 37, 41);
+    color: #fff;
 }
 
 body.dark-mode .list-group-item-action:hover {
     background-color: rgb(43, 47, 51);
     color: #fff;
+}
+
+body.dark-mode .accordion-body {
+    color: #fff;
+    background-color: rgb(53, 57, 61);
 }
 
 body.dark-mode .list-group-item-action:active {
