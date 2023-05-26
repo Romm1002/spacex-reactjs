@@ -3,7 +3,7 @@ import Routeur from "./router/Routeur";
 import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
-  return <Routeur />;
+    return <Routeur/>;
 }
 
 export default App;

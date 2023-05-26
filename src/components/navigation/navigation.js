@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import logo from "../../assets/img/logo.png";
 import ThemeMode from "../ThemeMode";
 
@@ -47,6 +47,11 @@ const Navigation = () => {
               <Link to="/roadster" className="nav-link" aria-current="page">
                 Roadster
               </Link>
+            </li>
+            <li className="nav-item">
+                <Link to="/company" className="nav-link" aria-current="page">
+                    About us
+                </Link>
             </li>
           </ul>
         </div>
