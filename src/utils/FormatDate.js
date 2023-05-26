@@ -12,8 +12,6 @@ export const FormatDate = (date) => {
     )
 }
 
-<<<<<<< HEAD
-=======
 export const FormatDistance = (distance) => {
     const formattedDistance = new Intl.NumberFormat('fr-FR', {
         minimumFractionDigits: 2,
@@ -23,5 +21,4 @@ export const FormatDistance = (distance) => {
     return formattedDistance + ' Km'
 }
 
->>>>>>> 7d8678aaec67156e82b10d165bc3b2e19947bc26
 export default FormatDate
