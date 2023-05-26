@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import HttpClient from '../components/HttpClient'
-import { Card, Carousel, Col, Container, ListGroup, Row } from 'react-bootstrap'
+import { Card, Carousel, Container } from 'react-bootstrap'
 import { FormatDate, FormatDistance } from '../utils/FormatDate'
 import VideoPlayer from '../utils/VideoPlayer'
 import InformationRoadster from '../components/InformationRoadster'
 
 const Roadster = () => {
     /** -------------- HTTP CLIENT -------------- **/
+    // eslint-disable-next-line
     const [error, setError] = useState(null)
     const [strResponse, setStrResponse] = useState(null)
     const [response, setResponse] = useState(null)

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 const ThemeMode = () => {
-    const [isDarkMode, setIsDarkMode] = useState(localStorage.getItem('theme') == 'dark')
+    const [isDarkMode, setIsDarkMode] = useState(localStorage.getItem('theme') === 'dark')
 
     useEffect(() => {
         if (isDarkMode) {
@@ -9,7 +9,7 @@ const ThemeMode = () => {
         } else {
             document.body.classList.remove('dark-mode')
         }
-        localStorage.setItem('theme', isDarkMode == true ? 'dark' : 'light')
+        localStorage.setItem('theme', isDarkMode === true ? 'dark' : 'light')
     }, [isDarkMode])
 
     const toggleDarkMode = () => {

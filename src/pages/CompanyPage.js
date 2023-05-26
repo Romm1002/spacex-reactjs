@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 
 function CompanyPage() {
     /** -------------- HTTP CLIENT -------------- **/
+    // eslint-disable-next-line
     const [error, setError] = useState(null)
     const [strResponse, setStrResponse] = useState(null)
     const [response, setResponse] = useState(null)
@@ -141,6 +142,7 @@ function CompanyPage() {
                                     <Card.Text>
                                         <ListGroup as='ol'>
                                             <Row>
+                                                {/* eslint-disable-next-line */}
                                                 {Object.keys(response).map((key) => {
                                                     if (
                                                         ![
