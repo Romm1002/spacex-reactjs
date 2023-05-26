@@ -1,4 +1,4 @@
-import { Col, ListGroup } from "react-bootstrap"
+import { Col, ListGroup } from 'react-bootstrap'
 
 const Information = ({ title, information }) => {
     return (
