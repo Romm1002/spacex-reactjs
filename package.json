@@ -43,6 +43,7 @@
   "devDependencies": {
     "axios": "^1.4.0",
     "chart.js": "^4.3.0",
+    "lodash": "^4.17.21",
     "prettier": "^2.8.8",
     "react-bootstrap": "^2.7.4",
     "react-chartjs-2": "^5.2.0",
