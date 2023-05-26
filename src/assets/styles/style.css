@@ -139,11 +139,17 @@ body.dark-mode .roadster {
 }
 body.dark-mode .list-group-item {
     background-color: rgb(33, 37, 41);
+    color: #fff;
 }
 
 body.dark-mode .list-group-item-action:hover {
     background-color: rgb(43, 47, 51);
     color: #fff;
+}
+
+body.dark-mode .accordion-body{
+    color: #fff;
+    background-color: rgb(53, 57, 61);
 }
 
 body.dark-mode .list-group-item-action:active {
