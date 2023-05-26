@@ -44,7 +44,6 @@ const QuizQuestions = () => {
         const updatedAnswers = [...selectedAnswers]
         updatedAnswers[currentQuestionIndex] = selectedOption
         setSelectedAnswers(updatedAnswers)
-        setTimer(30) // Réinitialiser le compte à rebours
 
         if (isAnswerCorrect(currentQuestionIndex, selectedOption)) {
             setScore((prevScore) => prevScore + 1)
