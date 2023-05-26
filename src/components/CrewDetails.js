@@ -11,7 +11,7 @@ import ApiContext from '../utils/ApiContext'
 const CrewMemberPage = () => {
     const { id } = useParams()
 
-    const { response, error } = useContext(ApiContext)
+    const { response, error, reset } = useContext(ApiContext)
 
     return (
         <>
@@ -27,7 +27,7 @@ const CrewMemberPage = () => {
 
             {response ? (
                 <div>
-                    <Link to='/'>
+                    <Link to='/' onClick={reset} >
                         <Button variant='secondary' className='my-3'>
                             Back
                         </Button>
