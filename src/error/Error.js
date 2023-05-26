@@ -1,5 +1,4 @@
-const Error = (error) => {
-    console.log(error)
+const Error = () => {
     return (
         <>
             <div className='App-error' role='alert'>

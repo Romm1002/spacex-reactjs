@@ -9,7 +9,7 @@ import ApiContext from '../utils/ApiContext'
 const History = () => {
     const { id } = useParams()
 
-    const { response, error } = useContext(ApiContext)
+    const { response, error, reset } = useContext(ApiContext)
 
     let countArticle = 0
 
@@ -25,7 +25,7 @@ const History = () => {
 
             {response && (
                 <>
-                    <Link to='/history'>
+                    <Link to='/history' onClick={reset}>
                         <div className='container ms-5 mt-5'>
                             <Button variant='secondary'>Retour</Button>
                         </div>

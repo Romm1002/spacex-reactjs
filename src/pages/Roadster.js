@@ -13,8 +13,6 @@ const Roadster = () => {
 
     const { response, error } = useContext(ApiContext)
 
-    console.log(response)
-
     let formattedSpeed
     let formattedWeight
     let earthDistance

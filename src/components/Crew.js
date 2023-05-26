@@ -18,16 +18,12 @@ const CrewComponent = () => {
     }, [response])
 
     const handleSearch = (searchTerm) => {
-        console.log(response)
-
         // Filter members with searchbar value matching name or agency
         const filteredResults = response.filter(
             (member) =>
                 member.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 member.agency.toLowerCase().includes(searchTerm.toLowerCase()),
         )
-
-        console.log(filteredResults)
 
         setFilteredCrew(filteredResults)
     }
