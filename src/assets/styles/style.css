@@ -52,3 +52,7 @@ body.dark-mode .card-body * {
 body.dark-mode a {
   background-color: rgb(26, 26, 26);
 }
+body.dark-mode .roadster {
+  background-color: rgb(26, 26, 26);
+  color: white;
+}
