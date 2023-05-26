@@ -62,8 +62,8 @@ const Rockets = () => {
                                         <b>Mass :</b> {rocket.mass.kg.toLocaleString()} kg
                                     </p>
                                 </Card.Body>
-                                <Link key={rocket.id} onClick={reset} to={`${rocket.id}`}>
-                                    <Button variant='info' className='my-3 mx-3'>
+                                <Link className={"link-bottom-card-rocket"} key={rocket.id} onClick={reset} to={`${rocket.id}`}>
+                                    <Button variant='outline-dark' className='my-3 mx-3'>
                                         More information
                                     </Button>
                                 </Link>
