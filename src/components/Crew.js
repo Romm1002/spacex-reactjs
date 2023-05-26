@@ -7,6 +7,7 @@ import HttpClient from './HttpClient'
 const CrewComponent = () => {
     // eslint-disable-next-line
     const [filteredCrew, setFilteredCrew] = useState([])
+    const [filteredCompany, setFilteredCompany] = useState([])
 
     /** -------------- HTTP CLIENT -------------- **/
     // eslint-disable-next-line
@@ -18,6 +19,7 @@ const CrewComponent = () => {
     useEffect(() => {
         setResponse(JSON.parse(strResponse))
         setFilteredCrew(JSON.parse(strResponse))
+        setFilteredCompany(JSON.parse(strResponse))
     }, [strResponse])
 
     /** -------------- HTTP CLIENT -------------- **/
@@ -27,6 +29,7 @@ const CrewComponent = () => {
             member.name.toLowerCase().includes(searchTerm.toLowerCase()),
         )
         setFilteredCrew(filteredResults)
+        setFilteredCompany(filteredResults)
     }
 
     return (
@@ -43,28 +46,27 @@ const CrewComponent = () => {
                         <CrewSearch onSearch={handleSearch} />
                     </div>
                     <div className='row justify-content-around'>
-                        {filteredCrew &&
+                        {(filteredCrew || filteredCompany) &&
                             filteredCrew.map((member) => (
                                 <Link
                                     key={member.id}
                                     to={`member/${member.id}`}
-                                    className='card bg-light mb-4'
+                                    class='card-crew'
                                     style={{
                                         width: '18rem',
-                                        padding: '0',
-                                        height: 'auto',
-                                        textDecoration: 'none',
+                                        height: '400px',
+                                        marginBottom: '2rem',
                                     }}
                                 >
-                                    <Card.Img
+                                    <img
                                         src={member.image}
-                                        variant='top'
-                                        alt={member.name}
-                                        style={{ objectFit: 'cover', height: '350px' }}
+                                        alt='balloon with an emoji face'
+                                        className='card-crew__img'
                                     />
-                                    <Card.Body>
-                                        <Card.Title>{member.name}</Card.Title>
-                                    </Card.Body>
+                                    <span className='card-crew__footer'>
+                                        <span>{member.name}</span>
+                                        <span>{member.status == 'active' ? 'Actif' : ''}</span>
+                                    </span>
                                 </Link>
                             ))}
                     </div>
