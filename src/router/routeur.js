@@ -10,6 +10,8 @@ import CrewDetails from '../pages/CrewDetails'
 import Rockets from '../pages/Rockets'
 import RocketsDetails from '../pages/RocketsDetails'
 import Roadster from '../pages/Roadster'
+import Quizs from '../pages/Quiz'
+import QuizQuestions from '../pages/QuizQuestions'
 
 const Routeur = () => {
     return (
@@ -24,6 +26,8 @@ const Routeur = () => {
                     <Route path='/rockets' element={<Rockets />}></Route>
                     <Route path='/rockets/:id' element={<RocketsDetails />}></Route>
                     <Route path='/roadster' element={<Roadster />}></Route>
+                    <Route path='/quiz' element={<Quizs />}></Route>
+                    <Route path='/quiz/:id' element={<QuizQuestions />}></Route>
                     <Route path='*' element={<NoMatch />}></Route>
                 </Routes>
             </Layout>
