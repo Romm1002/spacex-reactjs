@@ -1,29 +1,19 @@
 import HttpClient from '../components/HttpClient'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
 import { Col, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Error from '../error/Error'
+import ApiContext from '../utils/ApiContext'
 
 function CompanyPage() {
-    /** -------------- HTTP CLIENT -------------- **/
-    // eslint-disable-next-line
-    const [error, setError] = useState(null)
-    const [strResponse, setStrResponse] = useState(null)
-    const [response, setResponse] = useState(null)
 
-    // Convert strResponse to object
-    useEffect(() => {
-        setResponse(JSON.parse(strResponse))
-    }, [strResponse])
-    /** -------------- HTTP CLIENT -------------- **/
+    const { response, error } = useContext(ApiContext)
 
     return (
         <div id='company-wrapper' className={'text-light'}>
             <HttpClient
-                responseCallBack={setStrResponse}
-                errorCallBack={setError}
                 endpoint='company'
             />
 

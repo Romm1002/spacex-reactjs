@@ -1,6 +1,20 @@
+import { useContext, useEffect, } from 'react'
+import { useLocation } from 'react-router-dom'
 import Navigation from '../navigation/Navigation'
+import ApiContext from '../../utils/ApiContext';
 
 const Layout = ({ children }) => {
+
+    const { reset } = useContext(ApiContext);
+
+    let location = useLocation()
+
+    console.log(location, reset);
+
+    useEffect(() => {
+        reset()
+    }, [location])
+
     return (
         <>
             <header>

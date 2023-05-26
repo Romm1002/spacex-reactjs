@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
@@ -6,27 +6,16 @@ import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
 import HttpClient from './HttpClient'
 import Error from '../error/Error'
+import ApiContext from '../utils/ApiContext'
 
 const CrewMemberPage = () => {
     const { id } = useParams()
 
-    /** -------------- HTTP CLIENT -------------- **/
-    // eslint-disable-next-line
-    const [error, setError] = useState(null)
-    const [strResponse, setStrResponse] = useState(null)
-    const [response, setResponse] = useState(null)
-
-    // Convert strResponse to object
-    useEffect(() => {
-        setResponse(JSON.parse(strResponse))
-    }, [strResponse])
-    /** -------------- HTTP CLIENT -------------- **/
+    const { response, error } = useContext(ApiContext)
 
     return (
         <>
             <HttpClient
-                responseCallBack={setStrResponse}
-                errorCallBack={setError}
                 endpoint={`crew/${id}`}
             />
 
