@@ -133,8 +133,8 @@ body.dark-mode a {
 }
 
 body.dark-mode .roadster {
-  background-color: rgb(26, 26, 26);
-  color: white;
+    background-color: rgb(26, 26, 26);
+    color: white;
 }
 body.dark-mode .list-group-item {
     background-color: rgb(33, 37, 41);

@@ -1,8 +1,7 @@
-import { Col, ListGroup, Row } from "react-bootstrap"
-import Information from "./Information"
+import { Col, ListGroup, Row } from 'react-bootstrap'
+import Information from './Information'
 
 const InformationRoadster = ({ informations }) => {
-
     console.log(informations)
     return (
         <>
@@ -12,8 +11,14 @@ const InformationRoadster = ({ informations }) => {
                     <Information title='Weight' information={informations.weight} />
                 </Row>
                 <Row className='p-0 m-0 '>
-                    <Information title='Distance from Earth' information={informations.earthDistance} />
-                    <Information title='Distance from Mars' information={informations.marsDistance} />
+                    <Information
+                        title='Distance from Earth'
+                        information={informations.earthDistance}
+                    />
+                    <Information
+                        title='Distance from Mars'
+                        information={informations.marsDistance}
+                    />
                 </Row>
                 <Row className='p-0 m-0 '>
                     <Information title='NORAD identifier' information={informations.norad_id} />

@@ -18,7 +18,7 @@ function CompanyPage() {
     /** -------------- HTTP CLIENT -------------- **/
 
     return (
-        <div id="company-wrapper" className={"text-light"}>
+        <div id='company-wrapper' className={'text-light'}>
             <HttpClient
                 responseCallBack={setStrResponse}
                 errorCallBack={setError}
