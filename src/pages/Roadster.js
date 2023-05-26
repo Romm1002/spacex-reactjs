@@ -1,25 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import HttpClient from '../components/HttpClient'
 import { Card, Carousel, Container } from 'react-bootstrap'
 import { FormatDate, FormatDistance } from '../utils/FormatDate'
 import VideoPlayer from '../utils/VideoPlayer'
 import InformationRoadster from '../components/InformationRoadster'
 import Error from '../error/Error'
+import ApiContext from '../utils/ApiContext';
 
 const Roadster = () => {
-    /** -------------- HTTP CLIENT -------------- **/
-    // eslint-disable-next-line
-    const [error, setError] = useState(null)
-    const [strResponse, setStrResponse] = useState(null)
-    const [response, setResponse] = useState(null)
     const AU = 149600000
 
-    // Convert strResponse to object
-    useEffect(() => {
-        setResponse(JSON.parse(strResponse))
-    }, [strResponse])
-
-    /** -------------- HTTP CLIENT -------------- **/
+    const { response, error } = useContext(ApiContext);
 
     let formattedSpeed
     let formattedWeight
@@ -61,11 +52,7 @@ const Roadster = () => {
 
     return (
         <>
-            <HttpClient
-                responseCallBack={setStrResponse}
-                errorCallBack={setError}
-                endpoint='roadster'
-            />
+            <HttpClient endpoint={'roadster'} />
 
             {error && (
                 <>
