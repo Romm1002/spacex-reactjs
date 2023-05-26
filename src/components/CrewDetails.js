@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
@@ -15,9 +15,7 @@ const CrewMemberPage = () => {
 
     return (
         <>
-            <HttpClient
-                endpoint={`crew/${id}`}
-            />
+            <HttpClient endpoint={`crew/${id}`} />
 
             {error && (
                 <>
@@ -27,7 +25,7 @@ const CrewMemberPage = () => {
 
             {response ? (
                 <div>
-                    <Link to='/' onClick={reset} >
+                    <Link to='/' onClick={reset}>
                         <Button variant='secondary' className='my-3'>
                             Back
                         </Button>

@@ -38,27 +38,52 @@ const Navigation = () => {
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/rockets' onClick={reset} className='nav-link' aria-current='page'>
+                            <Link
+                                to='/rockets'
+                                onClick={reset}
+                                className='nav-link'
+                                aria-current='page'
+                            >
                                 Rockets
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/history' onClick={reset} className='nav-link' aria-current='page'>
+                            <Link
+                                to='/history'
+                                onClick={reset}
+                                className='nav-link'
+                                aria-current='page'
+                            >
                                 History
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/roadster' onClick={reset} className='nav-link' aria-current='page'>
+                            <Link
+                                to='/roadster'
+                                onClick={reset}
+                                className='nav-link'
+                                aria-current='page'
+                            >
                                 Roadster
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/company'  onClick={reset} className='nav-link' aria-current='page'>
+                            <Link
+                                to='/company'
+                                onClick={reset}
+                                className='nav-link'
+                                aria-current='page'
+                            >
                                 About us
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/quiz'  onClick={reset} className='nav-link' aria-current='page'>
+                            <Link
+                                to='/quiz'
+                                onClick={reset}
+                                className='nav-link'
+                                aria-current='page'
+                            >
                                 Quiz
                             </Link>
                         </li>

@@ -1,5 +1,5 @@
 import HttpClient from '../components/HttpClient'
-import { useContext, useEffect, useState } from 'react'
+import { useContext } from 'react'
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
 import { Col, Row } from 'react-bootstrap'
@@ -8,14 +8,11 @@ import Error from '../error/Error'
 import ApiContext from '../utils/ApiContext'
 
 function CompanyPage() {
-
     const { response, error } = useContext(ApiContext)
 
     return (
         <div id='company-wrapper' className={'text-light'}>
-            <HttpClient
-                endpoint='company'
-            />
+            <HttpClient endpoint='company' />
 
             {error && (
                 <>

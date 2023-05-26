@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useContext } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Button } from 'react-bootstrap'
 import FormatDate from '../utils/FormatDate'
@@ -30,7 +30,7 @@ const History = () => {
                             <Button variant='secondary'>Retour</Button>
                         </div>
                     </Link>
-                    <div  classname="d-flex justify-content-center">
+                    <div classname='d-flex justify-content-center'>
                         <h1 className='mt-5'>{response.title}</h1>
 
                         <h5 className='mt-5'>{response.details}</h5>
