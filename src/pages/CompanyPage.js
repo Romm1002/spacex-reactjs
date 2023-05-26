@@ -37,16 +37,21 @@ function CompanyPage() {
                         <Row>
                             <Col xs={12}>
                                 <Card className="w-100" style={{ border: "none" }}>
-                                {/*  todo: summary card  */}
+                                    <Card.Body>
+                                        <Card.Title><b>Summary</b></Card.Title>
+                                        <Card.Text>
+                                            { response.summary }
+                                        </Card.Text>
+                                    </Card.Body>
                                 </Card>
                             </Col>
                         </Row>
-
+                        <hr />
                         {/* Headquarters card */}
                         <Row>
                             <Col xs={12} md={6} className="me-md-0">
                                 <Card className="w-100" style={{ border: "none" }}>
-                                    <Card.Body className="pe-md-0">
+                                    <Card.Body className="">
                                         <Card.Title><b>Headquarters</b></Card.Title>
                                         <Card.Text>
                                             <ListGroup as="ol">
@@ -71,7 +76,7 @@ function CompanyPage() {
                                 </Card>
                             </Col>
 
-                            <Col xs={12} md={6} className="ps-md-0 ms-md-0">
+                            <Col xs={12} md={6} className="">
                                 {/* Links card */}
                                 <Card className="w-100" style={{ border: "none" }}>
                                     <Card.Body className="ps-md-0">
@@ -101,6 +106,8 @@ function CompanyPage() {
                                 </Card>
                             </Col>
                         </Row>
+
+                        <hr />
 
                         <Row>
                             {/* Others info card */}

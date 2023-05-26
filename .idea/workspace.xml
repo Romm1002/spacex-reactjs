@@ -5,37 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="080d07d7-e6dd-4e3a-94de-4cb99c8a415b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CardHistory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CardHistory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Crew.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Crew.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CrewDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CrewDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CrewSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CrewSearch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HttpClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HttpClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Rockets.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Rockets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RocketsDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RocketsDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/CompanyPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CompanyPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/History.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/History.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ListHistory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ListHistory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Rockets.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Rockets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/RocketsDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RocketsDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/crewDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/crewDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/noMatch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/noMatch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/routeur.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/routeur.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/FormatDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/FormatDate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +31,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\wamp64\bin\php\php8.2.0\php.exe" />
   <component name="ProjectId" id="2QH8TmfmLuQBmucYU2leYmHbgJ8" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -66,21 +40,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/CM/company",
-    "last_opened_file_path": "C:/wamp/www/React/spacex-reactjs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/CM/company&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/wamp/www/React/spacex-reactjs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -92,12 +66,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="41ade59f-250d-4fb8-9fc4-d930634ac579" name="Changes" comment="" />
+      <changelist id="080d07d7-e6dd-4e3a-94de-4cb99c8a415b" name="Changes" comment="" />
       <created>1684999156378</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684999156378</updated>
       <workItem from="1684999157850" duration="1059000" />
+      <workItem from="1685083670720" duration="1872000" />
     </task>
     <servers />
   </component>
