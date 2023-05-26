@@ -1,31 +1,19 @@
-import React, { useState, useEffect } from 'react'
+import React, { useContext } from 'react'
 import CardHistory from '../components/CardHistory'
 import { Row } from 'react-bootstrap'
 import HttpClient from '../components/HttpClient'
 import Error from '../error/Error'
+import ApiContext from '../utils/ApiContext'
 
 const ListHistory = () => {
-    /** -------------- HTTP CLIENT -------------- **/
-    // eslint-disable-next-line
-    const [error, setError] = useState(null)
-    const [strResponse, setStrResponse] = useState(null)
-    const [response, setResponse] = useState(null)
+    const { response, error } = useContext(ApiContext)
 
-    // Convert strResponse to object
-    useEffect(() => {
-        setResponse(JSON.parse(strResponse))
-    }, [strResponse])
-
-    /** -------------- HTTP CLIENT -------------- **/
+    console.log(response)
 
     return (
         <>
             <div className='container'>
-                <HttpClient
-                    responseCallBack={setStrResponse}
-                    errorCallBack={setError}
-                    endpoint='history'
-                />
+                <HttpClient endpoint='history' />
 
                 {error && (
                     <>
@@ -39,11 +27,7 @@ const ListHistory = () => {
                         <Row>
                             {response &&
                                 response.map((datum, id) => {
-                                    return (
-                                        <>
-                                            <CardHistory key={id} history={datum} id={id} />
-                                        </>
-                                    )
+                                    return <CardHistory key={id} history={datum} id={id} />
                                 })}
                         </Row>
                     </div>
