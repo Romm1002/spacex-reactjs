@@ -1,10 +1,10 @@
-import { createContext } from 'react';
+import { createContext } from 'react'
 
 const ApiContext = createContext({
-  response: null,
-  error: null,
-  setResponse: () => {},
-  setError: () => {},
-});
+    response: null,
+    error: null,
+    setResponse: () => {},
+    setError: () => {},
+})
 
-export default ApiContext;
+export default ApiContext

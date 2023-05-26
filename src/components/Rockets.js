@@ -33,7 +33,7 @@ const Rockets = () => {
                     <Error error={error} />
                 </>
             )}
-            
+
             {response && (
                 <div>
                     <div className='d-flex align-items-center justify-content-between my-4'>

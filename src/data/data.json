@@ -16,12 +16,52 @@
                 },
                 {
                     "question": "Quelle est la distance entre la Terre et la Lune ?",
-                    "options": ["384 400 km", "1 année lumière", "59 024 km", "589 472km"],
-                    "correctAnswer": "384 400km"
+                    "options": ["384 400 km", "1 année lumière", "59 024 km", "589 472 km"],
+                    "correctAnswer": "384 400 km"
                 },
                 {
                     "question": "Quelle est la planète du système solaire la plus proche du Soleil ?",
                     "options": ["Mars", "Mercure", "Pluton", "Jupiter"],
+                    "correctAnswer": "Mercure"
+                },
+                {
+                    "question": "Qu'est-ce qu'une étoile filante ?",
+                    "options": [
+                        "Une étoile qui brille intensément",
+                        "Un astéroïde en feu",
+                        "Une étoile en train de mourir",
+                        "Un phénomène atmosphérique"
+                    ],
+                    "correctAnswer": "Un astéroïde en feu"
+                },
+                {
+                    "question": "Quelle est la plus grande lune de Jupiter ?",
+                    "options": ["Europe", "Io", "Ganymède", "Callisto"],
+                    "correctAnswer": "Ganymède"
+                },
+                {
+                    "question": "Qu'est-ce qu'une nébuleuse ?",
+                    "options": [
+                        "Un type d'explosion stellaire",
+                        "Une formation d'étoiles",
+                        "Un groupe de planètes",
+                        "Un nuage interstellaire"
+                    ],
+                    "correctAnswer": "Un nuage interstellaire"
+                },
+                {
+                    "question": "Quelle est la planète la plus proche de la Terre ?",
+                    "options": ["Vénus", "Mars", "Mercure", "Jupiter"],
+                    "correctAnswer": "Vénus"
+                },
+                {
+                    "question": "Quelle est la période de révolution de la Terre autour du Soleil ?",
+                    "options": ["365 jours", "24 heures", "30 jours", "12 mois"],
+                    "correctAnswer": "365 jours"
+                },
+                {
+                    "question": "Quelle est la plus petite planète du système solaire ?",
+                    "options": ["Mars", "Mercure", "Vénus", "Pluton"],
                     "correctAnswer": "Mercure"
                 }
             ]
@@ -46,19 +86,59 @@
                     "correctAnswer": "24 heures 39 minutes"
                 },
                 {
-                    "question": "Comment s'appelle le premier astonaute français à s'être rendu sur l'ISS ?",
+                    "question": "Comment s'appelle le premier astronaute français à s'être rendu sur l'ISS ?",
                     "options": [
                         "Kyllian Mbappé",
                         "Jean Dujardin",
                         "Corentin Maille",
-                        "Thomas Pesquer"
+                        "Thomas Pesquet"
                     ],
-                    "correctAnswer": "Thomas Pesquer"
+                    "correctAnswer": "Thomas Pesquet"
                 },
                 {
                     "question": "Elon Musk est également le créateur de ?",
                     "options": ["Kiabi", "PayPal", "Coca-Cola", "Lenovo"],
                     "correctAnswer": "PayPal"
+                },
+                {
+                    "question": "Quelle est la distance moyenne entre la Terre et le Soleil ?",
+                    "options": ["150 000 km", "150 000 000 km", "150 000 000 000 km", "150 km"],
+                    "correctAnswer": "150 000 000 km"
+                },
+                {
+                    "question": "Quelle est la planète la plus éloignée du Soleil dans notre système solaire ?",
+                    "options": ["Uranus", "Neptune", "Pluton", "Saturne"],
+                    "correctAnswer": "Neptune"
+                },
+                {
+                    "question": "Quel est le nom de la première femme astronaute américaine à voyager dans l'espace ?",
+                    "options": [
+                        "Valentina Tereshkova",
+                        "Sally Ride",
+                        "Mae Jemison",
+                        "Peggy Whitson"
+                    ],
+                    "correctAnswer": "Sally Ride"
+                },
+                {
+                    "question": "Quelle est la durée d'une année sur Uranus ?",
+                    "options": ["365 jours", "84 ans", "29 ans", "10 000 ans"],
+                    "correctAnswer": "84 ans"
+                },
+                {
+                    "question": "Qu'est-ce qu'une supernova ?",
+                    "options": [
+                        "Un type de galaxie",
+                        "Une étoile en fin de vie qui explose",
+                        "Une planète avec une atmosphère dense",
+                        "Un trou noir"
+                    ],
+                    "correctAnswer": "Une étoile en fin de vie qui explose"
+                },
+                {
+                    "question": "Quelle est la planète la plus proche de la ceinture d'astéroïdes ?",
+                    "options": ["Mercure", "Vénus", "Terre", "Mars"],
+                    "correctAnswer": "Mars"
                 }
             ]
         },
@@ -85,6 +165,46 @@
                     "question": "Quel est le premier animal à avoir été envoyé dans l'espace ?",
                     "options": ["Chimpanzé", "Chien", "Singe", "Souris"],
                     "correctAnswer": "Chien"
+                },
+                {
+                    "question": "Quelle est la distance moyenne entre la Terre et le Soleil ?",
+                    "options": ["150 000 km", "150 000 000 km", "150 000 000 000 km", "150 km"],
+                    "correctAnswer": "150 000 000 km"
+                },
+                {
+                    "question": "Quelle est la planète la plus éloignée du Soleil dans notre système solaire ?",
+                    "options": ["Uranus", "Neptune", "Pluton", "Saturne"],
+                    "correctAnswer": "Neptune"
+                },
+                {
+                    "question": "Quel est le nom de la première femme astronaute américaine à voyager dans l'espace ?",
+                    "options": [
+                        "Valentina Tereshkova",
+                        "Sally Ride",
+                        "Mae Jemison",
+                        "Peggy Whitson"
+                    ],
+                    "correctAnswer": "Sally Ride"
+                },
+                {
+                    "question": "Quelle est la durée d'une année sur Uranus ?",
+                    "options": ["365 jours", "84 ans", "29 ans", "10 000 ans"],
+                    "correctAnswer": "84 ans"
+                },
+                {
+                    "question": "Qu'est-ce qu'une supernova ?",
+                    "options": [
+                        "Un type de galaxie",
+                        "Une étoile en fin de vie qui explose",
+                        "Une planète avec une atmosphère dense",
+                        "Un trou noir"
+                    ],
+                    "correctAnswer": "Une étoile en fin de vie qui explose"
+                },
+                {
+                    "question": "Quelle est la planète la plus proche de la ceinture d'astéroïdes ?",
+                    "options": ["Mercure", "Vénus", "Terre", "Mars"],
+                    "correctAnswer": "Mars"
                 }
             ]
         },
@@ -100,7 +220,7 @@
                 {
                     "question": "Quelle est la plus grande lune de Saturne ?",
                     "options": ["Titan", "Encelade", "Europe", "Io"],
-                    "correctAnswer": "Lune"
+                    "correctAnswer": "Titan"
                 },
                 {
                     "question": "Quel est le nom de la première femme astronaute à voyager dans l'espace ?",
@@ -113,9 +233,44 @@
                     "correctAnswer": "Valentina Tereshkova"
                 },
                 {
-                    "question": "Quel est le premier animal à avoir été envoyé dans l'espace ?",
-                    "options": ["Chimpanzé", "Chien", "Singe", "Souris"],
-                    "correctAnswer": "Chien"
+                    "question": "Quelle est la durée d'une journée sur Vénus ?",
+                    "options": ["24 heures", "243 jours terrestres", "365 jours", "12 heures"],
+                    "correctAnswer": "243 jours terrestres"
+                },
+                {
+                    "question": "Quelle est la plus grande planète du système solaire ?",
+                    "options": ["Mars", "Jupiter", "Saturne", "Vénus"],
+                    "correctAnswer": "Jupiter"
+                },
+                {
+                    "question": "Quelle est la première mission spatiale à avoir atteint Pluton ?",
+                    "options": ["Voyager 1", "New Horizons", "Cassini-Huygens", "Curiosity"],
+                    "correctAnswer": "New Horizons"
+                },
+                {
+                    "question": "Quelle est la composition principale de l'atmosphère de Titan, la plus grande lune de Saturne ?",
+                    "options": ["Oxygène", "Azote", "Méthane", "Hydrogène"],
+                    "correctAnswer": "Azote"
+                },
+                {
+                    "question": "Quel est le plus grand astéroïde connu dans notre système solaire ?",
+                    "options": ["Vesta", "Cérès", "Eros", "Apophis"],
+                    "correctAnswer": "Cérès"
+                },
+                {
+                    "question": "Quel est le nom de la mission de la NASA qui a envoyé des humains sur la Lune pour la première fois en 1969 ?",
+                    "options": ["Apollo 11", "Gemini 7", "Mercury 3", "Voyager 2"],
+                    "correctAnswer": "Apollo 11"
+                },
+                {
+                    "question": "Quelle est la distance moyenne entre la Terre et Mars ?",
+                    "options": [
+                        "55 millions de km",
+                        "150 millions de km",
+                        "384 400 km",
+                        "1 année lumière"
+                    ],
+                    "correctAnswer": "150 millions de km"
                 }
             ]
         }

@@ -21,7 +21,7 @@ const Quiz = ({ questions }) => {
     }
 
     return (
-        <div className={"text-center mx-auto w-50"}>
+        <div className={'text-center mx-auto w-50'}>
             {currentQuestionIndex < questions.length && (
                 <Question
                     question={questions[currentQuestionIndex].question}

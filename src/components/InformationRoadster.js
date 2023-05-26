@@ -1,5 +1,5 @@
-import { ListGroup, Row } from "react-bootstrap"
-import Information from "./Information"
+import { ListGroup, Row } from 'react-bootstrap'
+import Information from './Information'
 
 const InformationRoadster = ({ informations }) => {
     console.log(informations)
