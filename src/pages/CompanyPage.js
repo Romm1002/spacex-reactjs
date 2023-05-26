@@ -1,21 +1,20 @@
-import HttpClient from "../components/HttpClient";
-import {useEffect, useState} from "react";
-import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
-import {Col, Row} from "react-bootstrap";
-import {Link} from "react-router-dom";
+import HttpClient from '../components/HttpClient'
+import { useEffect, useState } from 'react'
+import Card from 'react-bootstrap/Card'
+import ListGroup from 'react-bootstrap/ListGroup'
+import { Col, Row } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 function CompanyPage() {
     /** -------------- HTTP CLIENT -------------- **/
-    const [error, setError] = useState(null);
-    const [strResponse, setStrResponse] = useState(null);
-    const [response, setResponse] = useState(null);
+    const [error, setError] = useState(null)
+    const [strResponse, setStrResponse] = useState(null)
+    const [response, setResponse] = useState(null)
 
     // Convert strResponse to object
     useEffect(() => {
-        setResponse(JSON.parse(strResponse));
-
-    }, [strResponse]);
+        setResponse(JSON.parse(strResponse))
+    }, [strResponse])
     /** -------------- HTTP CLIENT -------------- **/
 
     return (
@@ -23,25 +22,25 @@ function CompanyPage() {
             <HttpClient
                 responseCallBack={setStrResponse}
                 errorCallBack={setError}
-                endpoint="company"
+                endpoint='company'
             />
 
-            <div className="text-center w-75 p-3 mt-3 mx-auto border border-radius">
+            <div className='text-center w-75 p-3 mt-3 mx-auto border border-radius'>
                 {response != null && (
-                    <div className="mx-auto">
-                        <div className="mx-auto text-center w-50">
+                    <div className='mx-auto'>
+                        <div className='mx-auto text-center w-50'>
                             <h3>About our company</h3>
                             <hr />
                         </div>
                         {/* Summary */}
                         <Row>
                             <Col xs={12}>
-                                <Card className="w-100" style={{ border: "none" }}>
+                                <Card className='w-100' style={{ border: 'none' }}>
                                     <Card.Body>
-                                        <Card.Title><b>Summary</b></Card.Title>
-                                        <Card.Text>
-                                            { response.summary }
-                                        </Card.Text>
+                                        <Card.Title>
+                                            <b>Summary</b>
+                                        </Card.Title>
+                                        <Card.Text>{response.summary}</Card.Text>
                                     </Card.Body>
                                 </Card>
                             </Col>
@@ -49,56 +48,79 @@ function CompanyPage() {
                         <hr />
                         {/* Headquarters card */}
                         <Row>
-                            <Col xs={12} md={6} className="me-md-0">
-                                <Card className="w-100" style={{ border: "none" }}>
-                                    <Card.Body className="">
-                                        <Card.Title><b>Headquarters</b></Card.Title>
+                            <Col xs={12} md={6} className='me-md-0'>
+                                <Card className='w-100' style={{ border: 'none' }}>
+                                    <Card.Body className=''>
+                                        <Card.Title>
+                                            <b>Headquarters</b>
+                                        </Card.Title>
                                         <Card.Text>
-                                            <ListGroup as="ol">
-                                                {Object.keys(response.headquarters).map((key, value) => {
-                                                    return (
-                                                        <ListGroup as="ol">
-                                                            <ListGroup.Item
-                                                                as="li"
-                                                                className="d-flex list-group-item-action justify-content-between mt-2 align-items-start"
-                                                            >
-                                                                <div className="ms-2 me-auto">
-                                                                    <div className="row fw-bold">{key}</div>
-                                                                    <div className="row">{response.headquarters[key]}</div>
-                                                                </div>
-                                                            </ListGroup.Item>
-                                                        </ListGroup>
-                                                    );
-                                                })}
+                                            <ListGroup as='ol'>
+                                                {Object.keys(response.headquarters).map(
+                                                    (key, value) => {
+                                                        return (
+                                                            <ListGroup as='ol'>
+                                                                <ListGroup.Item
+                                                                    as='li'
+                                                                    className='d-flex list-group-item-action justify-content-between mt-2 align-items-start'
+                                                                >
+                                                                    <div className='ms-2 me-auto'>
+                                                                        <div className='row fw-bold'>
+                                                                            {key}
+                                                                        </div>
+                                                                        <div className='row'>
+                                                                            {
+                                                                                response
+                                                                                    .headquarters[
+                                                                                    key
+                                                                                ]
+                                                                            }
+                                                                        </div>
+                                                                    </div>
+                                                                </ListGroup.Item>
+                                                            </ListGroup>
+                                                        )
+                                                    },
+                                                )}
                                             </ListGroup>
                                         </Card.Text>
                                     </Card.Body>
                                 </Card>
                             </Col>
 
-                            <Col xs={12} md={6} className="">
+                            <Col xs={12} md={6} className=''>
                                 {/* Links card */}
-                                <Card className="w-100" style={{ border: "none" }}>
-                                    <Card.Body className="ps-md-0">
-                                        <Card.Title><b>Links</b></Card.Title>
+                                <Card className='w-100' style={{ border: 'none' }}>
+                                    <Card.Body className='ps-md-0'>
+                                        <Card.Title>
+                                            <b>Links</b>
+                                        </Card.Title>
                                         <Card.Text>
-                                            <ListGroup as="ol">
+                                            <ListGroup as='ol'>
                                                 {Object.keys(response.links).map((key, value) => {
                                                     return (
-                                                        <Link to={response.links[key]} target={"_blank"} style={{textDecoration: "none"}}>
-                                                            <ListGroup as="ol">
+                                                        <Link
+                                                            to={response.links[key]}
+                                                            target={'_blank'}
+                                                            style={{ textDecoration: 'none' }}
+                                                        >
+                                                            <ListGroup as='ol'>
                                                                 <ListGroup.Item
-                                                                    as="li"
-                                                                    className="d-flex list-group-item-action justify-content-between mt-2 align-items-start"
+                                                                    as='li'
+                                                                    className='d-flex list-group-item-action justify-content-between mt-2 align-items-start'
                                                                 >
-                                                                    <div className="ms-2 me-auto">
-                                                                        <div className="row fw-bold">{key}</div>
-                                                                        <div className="row">{response.links[key]}</div>
+                                                                    <div className='ms-2 me-auto'>
+                                                                        <div className='row fw-bold'>
+                                                                            {key}
+                                                                        </div>
+                                                                        <div className='row'>
+                                                                            {response.links[key]}
+                                                                        </div>
                                                                     </div>
                                                                 </ListGroup.Item>
                                                             </ListGroup>
                                                         </Link>
-                                                    );
+                                                    )
                                                 })}
                                             </ListGroup>
                                         </Card.Text>
@@ -111,29 +133,44 @@ function CompanyPage() {
 
                         <Row>
                             {/* Others info card */}
-                            <Card className="w-100" style={{ border: "none" }}>
+                            <Card className='w-100' style={{ border: 'none' }}>
                                 <Card.Body>
-                                    <Card.Title><b>Other Informations</b></Card.Title>
+                                    <Card.Title>
+                                        <b>Other Informations</b>
+                                    </Card.Title>
                                     <Card.Text>
-                                        <ListGroup as="ol">
+                                        <ListGroup as='ol'>
                                             <Row>
-                                            { Object.keys(response).map((key) => {
-                                                if (!["headquarters", "links", "summary"].includes(key)) {
-                                                    return (
-                                                        <ListGroup as="ol" className="col-xs-12 col-md-6 col-lg-4">
-                                                            <ListGroup.Item
-                                                                as="li"
-                                                                className="d-flex list-group-item-action justify-content-between mt-2 align-items-start"
+                                                {Object.keys(response).map((key) => {
+                                                    if (
+                                                        ![
+                                                            'headquarters',
+                                                            'links',
+                                                            'summary',
+                                                        ].includes(key)
+                                                    ) {
+                                                        return (
+                                                            <ListGroup
+                                                                as='ol'
+                                                                className='col-xs-12 col-md-6 col-lg-4'
                                                             >
-                                                                <div className="ms-2 me-auto">
-                                                                    <div className="row fw-bold">{key}</div>
-                                                                    <div className="row">{response[key]}</div>
-                                                                </div>
-                                                            </ListGroup.Item>
-                                                        </ListGroup>
-                                                    );
-                                                }
-                                            })}
+                                                                <ListGroup.Item
+                                                                    as='li'
+                                                                    className='d-flex list-group-item-action justify-content-between mt-2 align-items-start'
+                                                                >
+                                                                    <div className='ms-2 me-auto'>
+                                                                        <div className='row fw-bold'>
+                                                                            {key}
+                                                                        </div>
+                                                                        <div className='row'>
+                                                                            {response[key]}
+                                                                        </div>
+                                                                    </div>
+                                                                </ListGroup.Item>
+                                                            </ListGroup>
+                                                        )
+                                                    }
+                                                })}
                                             </Row>
                                         </ListGroup>
                                     </Card.Text>
@@ -144,7 +181,7 @@ function CompanyPage() {
                 )}
             </div>
         </>
-    );
+    )
 
     // {
 
@@ -174,4 +211,4 @@ function CompanyPage() {
     // - Un filtre est attendus ici afin de chercher un membre d’équipage par son nom ou agence
 }
 
-export default CompanyPage;
+export default CompanyPage

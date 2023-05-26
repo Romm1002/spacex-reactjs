@@ -1,13 +1,13 @@
 import React from 'react'
 import '../assets/styles/style.css'
-import Rockets from '../components/Rockets'
+import CrewComponent from '../components/Crew'
 
-function Rocket() {
+function Home() {
     return (
         <main className='container'>
-            <Rockets />
+            <CrewComponent />
         </main>
     )
 }
 
-export default Rocket
+export default Home

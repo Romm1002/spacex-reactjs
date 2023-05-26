@@ -1,11 +1,11 @@
 import React from 'react'
 import '../assets/styles/style.css'
-import RocketsDetails from '../components/RocketsDetails'
+import CrewMemberPage from '../components/CrewDetails'
 
 function CrewDetails() {
     return (
         <main className='container'>
-            <RocketsDetails />
+            <CrewMemberPage />
         </main>
     )
 }
