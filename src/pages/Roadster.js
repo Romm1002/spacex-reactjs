@@ -3,6 +3,7 @@ import HttpClient from '../components/HttpClient'
 import { Card, Carousel, Col, Container, ListGroup, Row } from 'react-bootstrap'
 import {FormatDate, FormatDistance} from '../utils/FormatDate'
 import VideoPlayer from '../utils/VideoPlayer'
+import InformationRoadster from '../components/InformationRoadster'
 
 const Roadster = () => {
     /** -------------- HTTP CLIENT -------------- **/
@@ -25,6 +26,7 @@ const Roadster = () => {
     let apoapsis
     let periapsis
     let period_days
+    let norad_id
 
     // On formatte les données
     if (response) {
@@ -42,6 +44,18 @@ const Roadster = () => {
         periapsis = periapsis + " / " + response.periapsis_au.toFixed(2) + ' AU '
 
         period_days = response.period_days.toFixed(0) + " Days"
+        norad_id = response.norad_id
+    }
+
+    const informations = {
+        "speed" : formattedSpeed, 
+        "weight" : formattedWeight, 
+        "earthDistance" : earthDistance, 
+        "marsDistance" : marsDistance, 
+        "apoapsis" : apoapsis, 
+        "periapsis" : periapsis, 
+        "period_days" : period_days, 
+        "norad_id" : norad_id
     }
 
     return (
@@ -76,102 +90,11 @@ const Roadster = () => {
 
                                 <Card.Link href={response.wikipedia}>Link Wikipedia </Card.Link>
                             </Card.Body>
-                            <Card.Title className='m-auto mb-4'>Live Information</Card.Title>
-                            <ListGroup className='list-group-flush'>
-                                <Row className='p-0 m-0 '>
-                                    <Col className='p-0 m-0'>
-                                        <ListGroup.Item
-                                            className='text-center'
-                                            style={{ lineHeight: 'auto' }}
-                                        >
-                                            <p className='mb-0'>
-                                                <b>Speed : </b>
-                                                {formattedSpeed}
-                                            </p>
-                                        </ListGroup.Item>
-                                    </Col>
-                                    <Col className='p-0 m-0'>
-                                        <ListGroup.Item
-                                            className='text-center'
-                                            style={{ lineHeight: 'auto' }}
-                                        >
-                                            <p className='mb-0'>
-                                                <b>Weight : </b> {formattedWeight}
-                                            </p>
-                                        </ListGroup.Item>
-                                    </Col>
-                                </Row>
-                                <Row className='p-0 m-0 '>
-                                    <Col className='p-0 m-0'>
-                                        <ListGroup.Item
-                                            className='text-center'
-                                            style={{ lineHeight: 'auto' }}
-                                        >
-                                            <p className='mb-0'>
-                                                <b>Distance from Earth : </b>
-                                                {earthDistance}
-                                            </p>
-                                        </ListGroup.Item>
-                                    </Col>
-                                    <Col className='p-0 m-0'>
-                                        <ListGroup.Item
-                                            className='text-center'
-                                            style={{ lineHeight: 'auto' }}
-                                        >
-                                            <p className='mb-0'>
-                                                <b>Distance from Mars : </b> {marsDistance}
-                                            </p>
-                                        </ListGroup.Item>
-                                    </Col>
-                                </Row>
-                                <Row className='p-0 m-0 '>
-                                    <Col className='p-0 m-0'>
-                                        <ListGroup.Item
-                                            className='text-center'
-                                            style={{ lineHeight: 'auto' }}
-                                        >
-                                            <p className='mb-0'>
-                                                <b>NORAD identifier : </b>
-                                                {response.norad_id}
-                                            </p>
-                                        </ListGroup.Item>
-                                    </Col>
-                                    <Col className='p-0 m-0'>
-                                        <ListGroup.Item
-                                            className='text-center'
-                                            style={{ lineHeight: 'auto' }}
-                                        >
-                                            <p className='mb-0'>
-                                                <b>period_days : </b>
-                                                {period_days}
-                                            </p>
-                                        </ListGroup.Item>
-                                    </Col>
-                                </Row>
-                                <Row className='p-0 m-0 '>
-                                    <Col className='p-0 m-0'>
-                                        <ListGroup.Item
-                                            className='text-center'
-                                            style={{ lineHeight: 'auto' }}
-                                        >
-                                            <p className='mb-0'>
-                                                <b>Apoapsis : </b>
-                                                {apoapsis}
-                                            </p>
-                                        </ListGroup.Item>
-                                    </Col>
-                                    <Col className='p-0 m-0'>
-                                        <ListGroup.Item
-                                            className='text-center'
-                                            style={{ lineHeight: 'auto' }}
-                                        >
-                                            <p className='mb-0'>
-                                                <b>periapsis : </b> {periapsis}
-                                            </p>
-                                        </ListGroup.Item>
-                                    </Col>
-                                </Row>
-                            </ListGroup>
+
+                            <div className='roadster'>
+                                <Card.Title className='m-auto mb-4'>Live Information</Card.Title>
+                                <InformationRoadster informations={informations} />
+                            </div>
                             <Card.Body>
                                 <div className='text-center'>
                                     <VideoPlayer videoId='wbSwFU6tY1c' />
