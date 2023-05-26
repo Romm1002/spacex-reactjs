@@ -18,14 +18,14 @@ function CompanyPage() {
     /** -------------- HTTP CLIENT -------------- **/
 
     return (
-        <>
+        <div id="company-wrapper" className={"text-light"}>
             <HttpClient
                 responseCallBack={setStrResponse}
                 errorCallBack={setError}
                 endpoint='company'
             />
 
-            <div className='text-center w-75 p-3 mt-3 mx-auto border border-radius'>
+            <div className='text-center w-75 p-3 mt-3 mx-auto'>
                 {response != null && (
                     <div className='mx-auto'>
                         <div className='mx-auto text-center w-50'>
@@ -180,7 +180,7 @@ function CompanyPage() {
                     </div>
                 )}
             </div>
-        </>
+        </div>
     )
 
     // {
