@@ -30,37 +30,27 @@ const History = () => {
 
             {response && (
                 <>
-                    <HttpClient
-                        responseCallBack={setStrResponse}
-                        errorCallBack={setError}
-                        endpoint={`history/${id}`}
-                    />
+                    <Link to='/history'>
+                        <div className='container ms-5 mt-5'>
+                            <Button variant='secondary'>Retour</Button>
+                        </div>
+                    </Link>
+                    <div className='App-history'>
+                        <h1 className='mt-5'>{response.title}</h1>
 
-                    {response && (
-                        <>
-                            <Link to='/history'>
-                                <div className='container ms-5 mt-5'>
-                                    <Button variant='secondary'>Retour</Button>
+                        <h5 className='mt-5'>{response.details}</h5>
+
+                        <p className='mt-5'>{FormatDate(response.event_date_unix)}</p>
+
+                        {response.links &&
+                            Object.values(response.links).map((link, id) => (
+                                <div key={id} className='mt-5'>
+                                    <p>
+                                        article {++countArticle} : <a href={link}>{link}</a>
+                                    </p>
                                 </div>
-                            </Link>
-                            <div className='App-history'>
-                                <h1 className='mt-5'>{response.title}</h1>
-
-                                <h5 className='mt-5'>{response.details}</h5>
-
-                                <p className='mt-5'>{FormatDate(response.event_date_unix)}</p>
-
-                                {response.links &&
-                                    Object.values(response.links).map((link, id) => (
-                                        <div key={id} className='mt-5'>
-                                            <p>
-                                                article {++countArticle} : <a href={link}>{link}</a>
-                                            </p>
-                                        </div>
-                                    ))}
-                            </div>
-                        </>
-                    )}
+                            ))}
+                    </div>
                 </>
             )}
         </>

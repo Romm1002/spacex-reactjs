@@ -18,8 +18,8 @@ const ListHistory = () => {
     /** -------------- HTTP CLIENT -------------- **/
 
     return (
-        <div className='container'>
-            <>
+        <>
+            <div className='container'>
                 <HttpClient
                     responseCallBack={setStrResponse}
                     errorCallBack={setError}
@@ -28,9 +28,6 @@ const ListHistory = () => {
 
                 <div className='App-history mt-5'>
                     <h1>History of Space X</h1>
-
-                    <div></div>
-
                     <div className='container mt-5'>
                         <Row>
                             {response &&
@@ -44,8 +41,8 @@ const ListHistory = () => {
                         </Row>
                     </div>
                 </div>
-            </>
-        </div>
+            </div>
+        </>
     )
 }
 

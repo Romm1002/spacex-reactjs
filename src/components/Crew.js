@@ -7,7 +7,6 @@ import HttpClient from './HttpClient'
 const CrewComponent = () => {
     // eslint-disable-next-line
     const [filteredCrew, setFilteredCrew] = useState([])
-    const [filteredCompany, setFilteredCompany] = useState([])
 
     /** -------------- HTTP CLIENT -------------- **/
     // eslint-disable-next-line
@@ -19,17 +18,21 @@ const CrewComponent = () => {
     useEffect(() => {
         setResponse(JSON.parse(strResponse))
         setFilteredCrew(JSON.parse(strResponse))
-        setFilteredCompany(JSON.parse(strResponse))
     }, [strResponse])
 
     /** -------------- HTTP CLIENT -------------- **/
 
     const handleSearch = (searchTerm) => {
+        console.log(response)
+
+        // Filter members with searchbar value matching name or agency
         const filteredResults = response.filter((member) =>
-            member.name.toLowerCase().includes(searchTerm.toLowerCase()),
+            (member.name.toLowerCase().includes(searchTerm.toLowerCase()) || member.agency.toLowerCase().includes(searchTerm.toLowerCase())),
         )
+
+        console.log(filteredResults)
+
         setFilteredCrew(filteredResults)
-        setFilteredCompany(filteredResults)
     }
 
     return (
@@ -46,27 +49,28 @@ const CrewComponent = () => {
                         <CrewSearch onSearch={handleSearch} />
                     </div>
                     <div className='row justify-content-around'>
-                        {(filteredCrew || filteredCompany) &&
+                        {filteredCrew &&
                             filteredCrew.map((member) => (
                                 <Link
                                     key={member.id}
                                     to={`member/${member.id}`}
-                                    class='card-crew'
+                                    className='card bg-light mb-4'
                                     style={{
                                         width: '18rem',
-                                        height: '400px',
-                                        marginBottom: '2rem',
+                                        padding: '0',
+                                        height: 'auto',
+                                        textDecoration: 'none',
                                     }}
                                 >
-                                    <img
+                                    <Card.Img
                                         src={member.image}
-                                        alt='balloon with an emoji face'
-                                        className='card-crew__img'
+                                        variant='top'
+                                        alt={member.name}
+                                        style={{ objectFit: 'cover', height: '350px' }}
                                     />
-                                    <span className='card-crew__footer'>
-                                        <span>{member.name}</span>
-                                        <span>{member.status == 'active' ? 'Actif' : ''}</span>
-                                    </span>
+                                    <Card.Body>
+                                        <Card.Title>{member.name}</Card.Title>
+                                    </Card.Body>
                                 </Link>
                             ))}
                     </div>
