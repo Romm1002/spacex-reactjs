@@ -7,6 +7,7 @@ import HttpClient from '../components/HttpClient'
 const History = () => {
     const { id } = useParams()
     /** -------------- HTTP CLIENT -------------- **/
+    // eslint-disable-next-line
     const [error, setError] = useState(null)
     const [strResponse, setStrResponse] = useState(null)
     const [response, setResponse] = useState(null)

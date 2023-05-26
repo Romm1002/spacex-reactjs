@@ -6,6 +6,7 @@ const HttpClient = ({ responseCallBack, errorCallBack, endpoint }) => {
 
     useEffect(() => {
         fetchData()
+    // eslint-disable-next-line
     }, [])
 
     const fetchData = async () => {

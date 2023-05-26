@@ -1,4 +1,4 @@
-import { Col, ListGroup, Row } from "react-bootstrap"
+import { ListGroup, Row } from "react-bootstrap"
 import Information from "./Information"
 
 const InformationRoadster = ({ informations }) => {
