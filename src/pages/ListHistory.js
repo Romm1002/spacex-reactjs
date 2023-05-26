@@ -1,44 +1,52 @@
-import React, {useEffect, useState} from "react";
-import axios from "axios";
+import React, { useState, useEffect } from "react";
 import CardHistory from "../components/CardHistory";
-import {Row} from "react-bootstrap";
+import { Row } from "react-bootstrap";
+import HttpClient from "../components/HttpClient";
 // Recupérer l'api
 
 const ListHistory = () => {
-    const [data, setData] = useState([]);
+  /** -------------- HTTP CLIENT -------------- **/
+  const [error, setError] = useState(null);
+  const [strResponse, setStrResponse] = useState(null);
+  const [response, setResponse] = useState(null);
 
-    useEffect(() => {
-        fetchData("https://api.spacexdata.com/v4/history");
-    }, []);
+  // Convert strResponse to object
+  useEffect(() => {
+    setResponse(JSON.parse(strResponse));
+  }, [strResponse]);
 
-    const fetchData = async (url) => {
-        try {
-            const response = await axios.get(url);
-            setData(response.data);
-        } catch (error) {
-            // gestion des erreurs
-        }
-    };
+  /** -------------- HTTP CLIENT -------------- **/
 
-    console.log(data);
+  return (
+    <div className="container">
 
-    return (
-        <>
-            <div className="App-history mt-5">
-                <h1>History of Space X</h1>
+    <>
+      <HttpClient
+        responseCallBack={setStrResponse}
+        errorCallBack={setError}
+        endpoint="history"
+      />
 
-                <div></div>
+      <div className="App-history mt-5">
+        <h1>History of Space X</h1>
 
-                <div className="container mt-5">
-                    <Row>
-                        {data.map((datum) => {
-                            return <CardHistory history={datum}/>;
-                        })}
-                    </Row>
-                </div>
-            </div>
-        </>
-    );
+        <div></div>
+
+        <div className="container mt-5">
+          <Row>
+            {response &&
+              response.map((datum, id) => {
+                return (
+                  <>
+                    <CardHistory key={id} history={datum} id={id} />
+                  </>
+                );
+              })}
+          </Row>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default ListHistory;

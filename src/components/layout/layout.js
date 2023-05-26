@@ -9,9 +9,9 @@ const Layout = ({children}) => {
 
             <main>{children}</main>
 
-            <footer>SpaceX par Corentin, Nathan & Romain</footer>
-        </>
-    );
+      <footer>SpaceX by Corentin, Nathan & Romain</footer>
+    </>
+  );
 };
 
 export default Layout;

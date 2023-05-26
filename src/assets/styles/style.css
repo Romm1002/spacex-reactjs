@@ -19,10 +19,36 @@ footer {
     margin-top: 2rem;
 }
 
-.App-history {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
+/* .App-history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+} */
+
+body.dark-mode {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+body.dark-mode footer {
+  background-color: #232323;
+}
+body.dark-mode nav {
+  background-color: #232323;
+}
+body.dark-mode nav a {
+  color: #fff;
+}
+body.dark-mode nav a:hover {
+  color: #e7e7e7;
+}
+body.dark-mode .card-body {
+  background-color: rgb(26, 26, 26);
+}
+body.dark-mode .card-body * {
+  color: #fff;
+}
+body.dark-mode a {
+  background-color: rgb(26, 26, 26);
 }

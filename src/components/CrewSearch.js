@@ -8,18 +8,18 @@ const CrewSearchComponent = ({onSearch}) => {
         onSearch(event.target.value);
     };
 
-    return (
-        <div>
-            <input
-                className="form-control"
-                type="search"
-                placeholder="Rechercher un astronaute..."
-                value={searchTerm}
-                onChange={handleSearch}
-                style={{width: "350px"}}
-            />
-        </div>
-    );
+  return (
+    <div>
+      <input
+        className="form-control"
+        type="search"
+        placeholder="Search for an astronaut..."
+        value={searchTerm}
+        onChange={handleSearch}
+        style={{ width: "350px" }}
+      />
+    </div>
+  );
 };
 
 export default CrewSearchComponent;
