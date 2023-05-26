@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import HttpClient from '../components/HttpClient'
 import { Card, Carousel, Col, Container, ListGroup, Row } from 'react-bootstrap'
-import {FormatDate, FormatDistance} from '../utils/FormatDate'
+import { FormatDate, FormatDistance } from '../utils/FormatDate'
 import VideoPlayer from '../utils/VideoPlayer'
 import InformationRoadster from '../components/InformationRoadster'
+import Error from '../error/Error'
 
 const Roadster = () => {
     /** -------------- HTTP CLIENT -------------- **/
@@ -35,27 +36,27 @@ const Roadster = () => {
 
         formattedWeight = response.launch_mass_kg + ' Kg / ' + response.launch_mass_lbs + ' lbs'
 
-        earthDistance = FormatDistance(response.earth_distance_km) 
-        marsDistance = FormatDistance(response.mars_distance_km) 
-        apoapsis = FormatDistance(response.apoapsis_au * AU) 
-        periapsis = FormatDistance(response.periapsis_au * AU) 
+        earthDistance = FormatDistance(response.earth_distance_km)
+        marsDistance = FormatDistance(response.mars_distance_km)
+        apoapsis = FormatDistance(response.apoapsis_au * AU)
+        periapsis = FormatDistance(response.periapsis_au * AU)
 
-        apoapsis = apoapsis + " / " + response.apoapsis_au.toFixed(2) + ' AU '
-        periapsis = periapsis + " / " + response.periapsis_au.toFixed(2) + ' AU '
+        apoapsis = apoapsis + ' / ' + response.apoapsis_au.toFixed(2) + ' AU '
+        periapsis = periapsis + ' / ' + response.periapsis_au.toFixed(2) + ' AU '
 
-        period_days = response.period_days.toFixed(0) + " Days"
+        period_days = response.period_days.toFixed(0) + ' Days'
         norad_id = response.norad_id
     }
 
     const informations = {
-        "speed" : formattedSpeed, 
-        "weight" : formattedWeight, 
-        "earthDistance" : earthDistance, 
-        "marsDistance" : marsDistance, 
-        "apoapsis" : apoapsis, 
-        "periapsis" : periapsis, 
-        "period_days" : period_days, 
-        "norad_id" : norad_id
+        speed: formattedSpeed,
+        weight: formattedWeight,
+        earthDistance: earthDistance,
+        marsDistance: marsDistance,
+        apoapsis: apoapsis,
+        periapsis: periapsis,
+        period_days: period_days,
+        norad_id: norad_id,
     }
 
     return (
@@ -65,6 +66,13 @@ const Roadster = () => {
                 errorCallBack={setError}
                 endpoint='roadster'
             />
+
+            {error && (
+                <>
+                    <Error error={error} />
+                </>
+            )}
+
             {response && (
                 <>
                     <Container className='mt-5'>
@@ -91,7 +99,7 @@ const Roadster = () => {
                                 <Card.Link href={response.wikipedia}>Link Wikipedia </Card.Link>
                             </Card.Body>
 
-                            <div className='roadster'>
+                            <div className='roadster text-center'>
                                 <Card.Title className='m-auto mb-4'>Live Information</Card.Title>
                                 <InformationRoadster informations={informations} />
                             </div>

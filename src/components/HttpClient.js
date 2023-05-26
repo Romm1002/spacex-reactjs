@@ -15,22 +15,18 @@ const HttpClient = ({responseCallBack, errorCallBack, endpoint}) => {
             await axios.get(URL).then(
                 // On fulfilled
                 (response) => {
-                    console.log("Received response from SpaceX api");
-                    console.log("Response : " + JSON.stringify(response.data, null, 4));
-
                     // Send response to the parent
                     responseCallBack(JSON.stringify(response.data));
                 },
                 // On rejected
                 (rejectionReason) => {
-                    errorCallBack(rejectionReason);
-                    console.log("Http request has been rejected");
+                    console.log(rejectionReason.message)
+                    errorCallBack(rejectionReason.message);
                 }
             );
         } catch (error) {
             // Handle error
             errorCallBack(error.message);
-            console.log("The SpaceX api returned an error : " + error.message);
         }
     };
 };
