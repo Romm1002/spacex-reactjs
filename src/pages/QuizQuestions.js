@@ -126,7 +126,7 @@ const QuizQuestions = () => {
                             </div>
                         ))}
                     </div>
-                    <p style={{ fontWeight: 'bold' }}>Temps restant : {timer} secondes</p>
+                    <p style={{ fontWeight: 'bold' }}>Remaining time : {timer} seconds</p>
                     <button className='btnNext' onClick={handleNextQuestion}>
                         Next
                     </button>
