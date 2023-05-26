@@ -1,0 +1,123 @@
+{
+    "quizzes": [
+        {
+            "id": 1,
+            "title": "Quiz 1",
+            "questions": [
+                {
+                    "question": "Quelle est la plus grande planète du système solaire ?",
+                    "options": ["Mars", "Jupiter", "Saturne", "Vénus"],
+                    "correctAnswer": "Jupiter"
+                },
+                {
+                    "question": "Quel est le nom de notre galaxie ?",
+                    "options": ["Andromède", "Voie lactée", "Sombrero", "Bague"],
+                    "correctAnswer": "Voie lactée"
+                },
+                {
+                    "question": "Quelle est la distance entre la Terre et la Lune ?",
+                    "options": ["384 400 km", "1 année lumière", "59 024 km", "589 472km"],
+                    "correctAnswer": "384 400km"
+                },
+                {
+                    "question": "Quelle est la planète du système solaire la plus proche du Soleil ?",
+                    "options": ["Mars", "Mercure", "Pluton", "Jupiter"],
+                    "correctAnswer": "Mercure"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Quiz 2",
+            "questions": [
+                {
+                    "question": "Quelle est la première personne à avoir marché sur la Lune ?",
+                    "options": ["Neil Armstrong", "Buzz Aldrin", "Yuri Gagarin", "Alan Shepard"],
+                    "correctAnswer": "Neil Armstrong"
+                },
+                {
+                    "question": "Quelle est la durée d'une journée sur Mars ?",
+                    "options": [
+                        "23 heures 56 minutes",
+                        "24 heures",
+                        "24 heures 39 minutes",
+                        "25 heures 37 minutes"
+                    ],
+                    "correctAnswer": "24 heures 39 minutes"
+                },
+                {
+                    "question": "Comment s'appelle le premier astonaute français à s'être rendu sur l'ISS ?",
+                    "options": [
+                        "Kyllian Mbappé",
+                        "Jean Dujardin",
+                        "Corentin Maille",
+                        "Thomas Pesquer"
+                    ],
+                    "correctAnswer": "Thomas Pesquer"
+                },
+                {
+                    "question": "Elon Musk est également le créateur de ?",
+                    "options": ["Kiabi", "PayPal", "Coca-Cola", "Lenovo"],
+                    "correctAnswer": "PayPal"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Quiz 3",
+            "questions": [
+                {
+                    "question": "Quelle est la première sonde à avoir atteint la Lune ?",
+                    "options": ["Lunar Orbiter 1", "Apollo 11", "Pioneer 4", "Luna 2"],
+                    "correctAnswer": "Luna 2"
+                },
+                {
+                    "question": "Quel est le plus grand satellite naturel de la Terre ?",
+                    "options": ["Phobos", "Titan", "Lune", "Europa"],
+                    "correctAnswer": "Lune"
+                },
+                {
+                    "question": "Quel est le plus grand volcan connu dans le système solaire ?",
+                    "options": ["Mauna Loa", "Olympus Mons", "Mount Everest", "Vesuvius"],
+                    "correctAnswer": "Olympus Mons"
+                },
+                {
+                    "question": "Quel est le premier animal à avoir été envoyé dans l'espace ?",
+                    "options": ["Chimpanzé", "Chien", "Singe", "Souris"],
+                    "correctAnswer": "Chien"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Quiz 4",
+            "questions": [
+                {
+                    "question": "Quelle planète est souvent appelée la 'planète rouge' ?",
+                    "options": ["Mars", "Vénus", "Jupiter", "Saturne"],
+                    "correctAnswer": "Mars"
+                },
+                {
+                    "question": "Quelle est la plus grande lune de Saturne ?",
+                    "options": ["Titan", "Encelade", "Europe", "Io"],
+                    "correctAnswer": "Lune"
+                },
+                {
+                    "question": "Quel est le nom de la première femme astronaute à voyager dans l'espace ?",
+                    "options": [
+                        "Valentina Tereshkova",
+                        "Sally Ride",
+                        "Mae Jemison",
+                        "Peggy Whitson"
+                    ],
+                    "correctAnswer": "Valentina Tereshkova"
+                },
+                {
+                    "question": "Quel est le premier animal à avoir été envoyé dans l'espace ?",
+                    "options": ["Chimpanzé", "Chien", "Singe", "Souris"],
+                    "correctAnswer": "Chien"
+                }
+            ]
+        }
+    ]
+}

@@ -48,6 +48,11 @@ const Navigation = () => {
                                 Roadster
                             </Link>
                         </li>
+                        <li class='nav-item'>
+                            <Link to='/quiz' className='nav-link' aria-current='page'>
+                                Quiz
+                            </Link>
+                        </li>
                     </ul>
                 </div>
                 <ThemeMode />

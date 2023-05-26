@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import HttpClient from '../components/HttpClient'
 import { Card, Carousel, Col, Container, ListGroup, Row } from 'react-bootstrap'
-import {FormatDate, FormatDistance} from '../utils/FormatDate'
+import { FormatDate, FormatDistance } from '../utils/FormatDate'
 import VideoPlayer from '../utils/VideoPlayer'
 
 const Roadster = () => {
@@ -33,15 +33,15 @@ const Roadster = () => {
 
         formattedWeight = response.launch_mass_kg + ' Kg / ' + response.launch_mass_lbs + ' lbs'
 
-        earthDistance = FormatDistance(response.earth_distance_km) 
-        marsDistance = FormatDistance(response.mars_distance_km) 
-        apoapsis = FormatDistance(response.apoapsis_au * AU) 
-        periapsis = FormatDistance(response.periapsis_au * AU) 
+        earthDistance = FormatDistance(response.earth_distance_km)
+        marsDistance = FormatDistance(response.mars_distance_km)
+        apoapsis = FormatDistance(response.apoapsis_au * AU)
+        periapsis = FormatDistance(response.periapsis_au * AU)
 
-        apoapsis = apoapsis + " / " + response.apoapsis_au.toFixed(2) + ' AU '
-        periapsis = periapsis + " / " + response.periapsis_au.toFixed(2) + ' AU '
+        apoapsis = apoapsis + ' / ' + response.apoapsis_au.toFixed(2) + ' AU '
+        periapsis = periapsis + ' / ' + response.periapsis_au.toFixed(2) + ' AU '
 
-        period_days = response.period_days.toFixed(0) + " Days"
+        period_days = response.period_days.toFixed(0) + ' Days'
     }
 
     return (
