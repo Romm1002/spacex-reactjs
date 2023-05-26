@@ -6,7 +6,7 @@ const CardHistory = ({ history }) => {
     return (
         <>
             <Col xl={4} lg={6} md={6} sm={12} className='mb-2'>
-                <Card>
+                <Card style={{ width: '24rem' }}>
                     <Link to={`/history/${history.id}`} style={{ textDecoration: 'none' }}>
                         <Card.Body>
                             <Card.Title>{history.title}</Card.Title>

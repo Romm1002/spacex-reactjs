@@ -4,6 +4,13 @@
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
         Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#root {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-decoration: none;
 }
 
@@ -52,6 +59,74 @@ body.dark-mode .card-body * {
 body.dark-mode a {
     background-color: rgb(26, 26, 26);
 }
+
+.card-crew {
+    --blur: 16px;
+    --size: clamp(300px, 50vmin, 600px);
+    width: var(--size);
+    aspect-ratio: 4 / 3;
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    color: #000;
+    transform: translateZ(0);
+}
+
+.card-crew__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(calc(1 + (var(--hover, 0) * 0.07)));
+    transition: transform 0.2s;
+}
+
+.card-crew__footer {
+    padding: 0 1.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: red;
+    display: grid;
+    grid-template-row: auto auto;
+    gap: 0.5ch;
+    background: hsl(0 0% 100% / 0.5);
+    backdrop-filter: blur(var(--blur));
+    height: 30%;
+    align-content: center;
+}
+
+.card-crew__action {
+    position: absolute;
+    aspect-ratio: 1;
+    width: calc(var(--size) * 0.15);
+    bottom: 30%;
+    right: 1.5rem;
+    transform: translateY(50%) translateY(calc((var(--size) * 0.4)))
+        translateY(calc(var(--hover, 0) * (var(--size) * -0.4)));
+    background: purple;
+    display: grid;
+    place-items: center;
+    border-radius: 0.5rem;
+    background: hsl(0 0% 100% / 0.5);
+    /*   backdrop-filter: blur(calc(var(--blur) * 0.5)); */
+    transition: transform 0.2s;
+}
+
+.card-crew__footer span:nth-of-type(1) {
+    font-size: calc(var(--size) * 0.065);
+}
+
+.card-crew__footer span:nth-of-type(2) {
+    font-size: calc(var(--size) * 0.035);
+}
+
+.card-crew:is(:hover, :focus-visible) {
+    --hover: 1;
+}
+
+.row > * {
+    padding: 0 !important;
 body.dark-mode .roadster {
   background-color: rgb(26, 26, 26);
   color: white;
