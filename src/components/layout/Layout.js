@@ -1,17 +1,17 @@
-import Navigation from "../navigation/Navigation";
+import Navigation from '../navigation/Navigation'
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
     return (
         <>
             <header>
-                <Navigation/>
+                <Navigation />
             </header>
 
             <main>{children}</main>
 
-      <footer>SpaceX by Corentin, Nathan & Romain</footer>
-    </>
-  );
-};
+            <footer>SpaceX by Corentin, Nathan & Romain</footer>
+        </>
+    )
+}
 
-export default Layout;
+export default Layout
