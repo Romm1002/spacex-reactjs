@@ -12,7 +12,7 @@ import ApiContext from '../utils/ApiContext'
 const RocketsDetails = () => {
     const { id } = useParams()
 
-    const { response, error } = useContext(ApiContext)
+    const { response, error, reset } = useContext(ApiContext)
 
     return (
         <>
@@ -28,7 +28,7 @@ const RocketsDetails = () => {
 
             {response ? (
                 <>
-                    <Link to='/rockets'>
+                    <Link to='/rockets' onClick={reset}>
                         <Button variant='secondary' className='my-3'>
                             Back
                         </Button>

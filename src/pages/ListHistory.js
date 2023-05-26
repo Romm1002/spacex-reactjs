@@ -7,9 +7,7 @@ import ApiContext from '../utils/ApiContext'
 
 const ListHistory = () => {
     const { response, error } = useContext(ApiContext)
-
-    console.log(response)
-
+    
     return (
         <>
             <div className='container'>

@@ -9,8 +9,6 @@ const Layout = ({ children }) => {
 
     let location = useLocation()
 
-    console.log(location, reset);
-
     useEffect(() => {
         reset()
     }, [location])
