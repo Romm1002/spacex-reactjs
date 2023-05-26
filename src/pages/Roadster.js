@@ -43,8 +43,7 @@ const Roadster = () => {
 
         apoapsis = apoapsis + ' / ' + response.apoapsis_au.toFixed(2) + ' AU '
         periapsis = periapsis + ' / ' + response.periapsis_au.toFixed(2) + ' AU '
-
-        period_days = response.period_days.toFixed(0) + ' Days'
+        period_days = response.period_days.toFixed(0) + " Days"
         norad_id = response.norad_id
     }
 

@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Layout from '../components/layout/Layout'
 import Home from '../pages/Home'
-import NoMatch from '../error/NoMatch'
+import NoMatch from './NoMatch'
 import CompanyPage from '../pages/CompanyPage'
 import ListHistory from '../pages/ListHistory'
 import History from '../pages/History'

@@ -19,7 +19,7 @@ function CompanyPage() {
     /** -------------- HTTP CLIENT -------------- **/
 
     return (
-        <>
+        <div id="company-wrapper" className={"text-light"}>
             <HttpClient
                 responseCallBack={setStrResponse}
                 errorCallBack={setError}
@@ -187,7 +187,7 @@ function CompanyPage() {
                     </div>
                 )}
             </div>
-        </>
+        </div>
     )
 
     // {
