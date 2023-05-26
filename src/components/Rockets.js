@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card'
 import Carousel from 'react-bootstrap/Carousel'
 import Button from 'react-bootstrap/Button'
 import HttpClient from './HttpClient'
+import Error from '../error/Error'
 
 const Rockets = () => {
     /** -------------- HTTP CLIENT -------------- **/
@@ -26,6 +27,13 @@ const Rockets = () => {
                 errorCallBack={setError}
                 endpoint='rockets'
             />
+
+            {error && (
+                <>
+                    <Error error={error} />
+                </>
+            )}
+            
             {response && (
                 <div>
                     <div className='d-flex align-items-center justify-content-between my-4'>
