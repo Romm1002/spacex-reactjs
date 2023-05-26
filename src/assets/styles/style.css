@@ -35,6 +35,15 @@ footer {
     font-size: calc(10px + 2vmin);
 }
 
+.App-history {
+    min-height: 82vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+}
+
 body.dark-mode {
     background-color: #2a2a2a;
     color: #fff;
@@ -59,9 +68,6 @@ body.dark-mode .card-body {
 }
 body.dark-mode .card-body * {
     color: #fff;
-}
-body.dark-mode a {
-    background-color: rgb(26, 26, 26);
 }
 
 .card-crew {

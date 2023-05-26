@@ -25,12 +25,12 @@ const History = () => {
 
             {response && (
                 <>
-                    <Link to='/history' onClick={reset}>
-                        <div className='container ms-5 mt-5'>
+                    <div className='container ms-5 mt-5'>
+                        <Link to='/history' onClick={reset}>
                             <Button variant='secondary'>Retour</Button>
-                        </div>
-                    </Link>
-                    <div classname='d-flex justify-content-center'>
+                        </Link>
+                    </div>
+                    <div className='App-history'>
                         <h1 className='mt-5'>{response.title}</h1>
 
                         <h5 className='mt-5'>{response.details}</h5>
