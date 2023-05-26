@@ -28,9 +28,6 @@ const ListHistory = () => {
 
                 <div className='App-history mt-5'>
                     <h1>History of Space X</h1>
-
-                    <div></div>
-
                     <div className='container mt-5'>
                         <Row>
                             {response &&

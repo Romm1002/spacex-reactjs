@@ -1,9 +1,9 @@
-import "./assets/styles/style.css";
-import Routeur from "./router/Routeur";
-import "bootstrap/dist/css/bootstrap.css";
+import './assets/styles/style.css'
+import Routeur from './router/Routeur'
+import 'bootstrap/dist/css/bootstrap.css'
 
 function App() {
-    return <Routeur/>;
+    return <Routeur />
 }
 
-export default App;
+export default App
