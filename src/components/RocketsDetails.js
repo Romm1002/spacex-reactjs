@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card'
 import Carousel from 'react-bootstrap/Carousel'
 import Accordion from 'react-bootstrap/Accordion'
 import HttpClient from './HttpClient'
+import Error from '../error/Error'
 
 const RocketsDetails = () => {
     const { id } = useParams()
@@ -29,6 +30,13 @@ const RocketsDetails = () => {
                 errorCallBack={setError}
                 endpoint={`rockets/${id}`}
             />
+
+            {error && (
+                <>
+                    <Error error={error} />
+                </>
+            )}
+
             {response ? (
                 <>
                     <Link to='/rockets'>

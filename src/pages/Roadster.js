@@ -4,6 +4,7 @@ import { Card, Carousel, Container } from 'react-bootstrap'
 import { FormatDate, FormatDistance } from '../utils/FormatDate'
 import VideoPlayer from '../utils/VideoPlayer'
 import InformationRoadster from '../components/InformationRoadster'
+import Error from '../error/Error'
 
 const Roadster = () => {
     /** -------------- HTTP CLIENT -------------- **/
@@ -65,6 +66,13 @@ const Roadster = () => {
                 errorCallBack={setError}
                 endpoint='roadster'
             />
+
+            {error && (
+                <>
+                    <Error error={error} />
+                </>
+            )}
+
             {response && (
                 <>
                     <Container className='mt-5'>
@@ -91,7 +99,7 @@ const Roadster = () => {
                                 <Card.Link href={response.wikipedia}>Link Wikipedia </Card.Link>
                             </Card.Body>
 
-                            <div className='roadster'>
+                            <div className='roadster text-center'>
                                 <Card.Title className='m-auto mb-4'>Live Information</Card.Title>
                                 <InformationRoadster informations={informations} />
                             </div>

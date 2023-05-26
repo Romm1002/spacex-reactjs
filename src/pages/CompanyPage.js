@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
 import { Col, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import Error from '../error/Error'
 
 function CompanyPage() {
     /** -------------- HTTP CLIENT -------------- **/
@@ -19,12 +20,18 @@ function CompanyPage() {
     /** -------------- HTTP CLIENT -------------- **/
 
     return (
-        <>
+        <div id='company-wrapper' className={'text-light'}>
             <HttpClient
                 responseCallBack={setStrResponse}
                 errorCallBack={setError}
                 endpoint='company'
             />
+
+            {error && (
+                <>
+                    <Error error={error} />
+                </>
+            )}
 
             <div className='text-center w-75 p-3 mt-3 mx-auto border border-radius'>
                 {response != null && (
@@ -182,7 +189,7 @@ function CompanyPage() {
                     </div>
                 )}
             </div>
-        </>
+        </div>
     )
 
     // {

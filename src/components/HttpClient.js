@@ -6,7 +6,7 @@ const HttpClient = ({ responseCallBack, errorCallBack, endpoint }) => {
 
     useEffect(() => {
         fetchData()
-        // eslint-disable-next-line
+    // eslint-disable-next-line
     }, [])
 
     const fetchData = async () => {
@@ -24,14 +24,13 @@ const HttpClient = ({ responseCallBack, errorCallBack, endpoint }) => {
                 },
                 // On rejected
                 (rejectionReason) => {
-                    errorCallBack(rejectionReason)
-                    console.log('Http request has been rejected')
-                },
-            )
+                    console.log(rejectionReason.message)
+                    errorCallBack(rejectionReason.message);
+                }
+            );
         } catch (error) {
             // Handle error
-            errorCallBack(error.message)
-            console.log('The SpaceX api returned an error : ' + error.message)
+            errorCallBack(error.message);
         }
     }
 }

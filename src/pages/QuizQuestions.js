@@ -110,4 +110,22 @@ const QuizQuestions = () => {
   );
 };
 
-export default QuizQuestions;
+            {showResults && (
+                <div>
+                    <h3>Résultats :</h3>
+                    {quiz.questions.map((question, questionIndex) => (
+                        <div key={questionIndex}>
+                            <p>{question.question}</p>
+                            <p>Votre réponse : {selectedAnswers[questionIndex] || 'Non répondu'}</p>
+                            {isAnswerCorrect(questionIndex, selectedAnswers[questionIndex]) ? (
+                                <p>Correct!</p>
+                            ) : (
+                                <p>Incorrect. La réponse correcte est : {question.correctAnswer}</p>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            )}
+
+
+export default QuizQuestions

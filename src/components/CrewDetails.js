@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
 import HttpClient from './HttpClient'
+import Error from '../error/Error'
 
 const CrewMemberPage = () => {
     const { id } = useParams()
@@ -28,6 +29,13 @@ const CrewMemberPage = () => {
                 errorCallBack={setError}
                 endpoint={`crew/${id}`}
             />
+
+            {error && (
+                <>
+                    <Error error={error} />
+                </>
+            )}
+            
             {response ? (
                 <div>
                     <Link to='/'>
