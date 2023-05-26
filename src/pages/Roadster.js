@@ -84,7 +84,7 @@ const Roadster = () => {
                                 </Card.Subtitle>
                                 <Card.Text>{response.details}</Card.Text>
 
-                                <Card.Link href={response.wikipedia}>Link Wikipedia </Card.Link>
+                                <Card.Link href={response.wikipedia} target='_blank'>Link Wikipedia </Card.Link>
                             </Card.Body>
 
                             <div className='roadster text-center'>
