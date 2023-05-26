@@ -167,3 +167,51 @@ body.dark-mode #company-wrapper .card-body {
 body.dark-mode #company-wrapper a {
     background-color: #2a2a2a;
 }
+
+.quiz {
+    width: 60%;
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem auto;
+}
+
+.questions .ligne input {
+    display: none;
+}
+.questions h4 {
+    margin-bottom: 15px;
+}
+.questions .ligne label {
+    border: 1px solid #000;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.questions .ligne label:hover {
+    background-color: rgba(215, 244, 255, 0.682);
+}
+.option.active label {
+    background-color: rgba(215, 244, 255, 0.682);
+}
+.option.active {
+    width: 100%;
+}
+
+.quiz-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+}
+
+.btnNext {
+    padding: 8px 20px;
+    border: 1px solid #000;
+    background-color: rgb(215, 244, 255);
+}

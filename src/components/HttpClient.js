@@ -8,7 +8,6 @@ const HttpClient = ({ endpoint }) => {
 
     useEffect(() => {
         fetchData()
-        console.log("fetch data")
         // eslint-disable-next-line
     }, [])
 

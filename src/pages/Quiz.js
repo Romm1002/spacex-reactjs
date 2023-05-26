@@ -1,7 +1,7 @@
 import React from 'react'
 import quizzesData from '../data/data.json'
 import { Link } from 'react-router-dom'
-import { CardImg, Col, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
 
@@ -17,31 +17,31 @@ const Quizs = () => {
                             <h3>Choose a quizz !</h3>
                             <hr className={'w-75 mx-auto'} />
                         </Card.Title>
-                        <Card.Text>
-                            {quizzes.map((quiz, index) => (
-                                <ListGroup as='ol'>
-                                    <ListGroup.Item
-                                        key={index}
-                                        as='li'
-                                        className='text-center list-group-item-action mt-2'
-                                    >
-                                        <div className='ms-2 me-auto'>
-                                            <div className='row fw-bold'>
-                                                <Link
-                                                    to={`/quiz/${index}`}
-                                                    style={{
-                                                        textDecoration: 'none',
-                                                        color: 'black',
-                                                    }}
-                                                >
-                                                    <h2>{quiz.title}</h2>
-                                                </Link>
-                                            </div>
+                        {quizzes.map((quiz, index) => (
+                            <ListGroup as='ol' key={index}>
+                                <ListGroup.Item
+                                    key={index}
+                                    as='li'
+                                    className='text-center list-group-item-action mt-2'
+                                >
+                                    <div className='ms-2 me-auto'>
+                                        <div className='row fw-bold'>
+                                            <Link
+                                                to={`/quiz/${index}`}
+                                                style={{
+                                                    textDecoration: 'none',
+                                                    color: 'black',
+                                                }}
+                                            >
+                                                <span style={{ fontSize: '1.5rem' }}>
+                                                    {quiz.title}
+                                                </span>
+                                            </Link>
                                         </div>
-                                    </ListGroup.Item>
-                                </ListGroup>
-                            ))}
-                        </Card.Text>
+                                    </div>
+                                </ListGroup.Item>
+                            </ListGroup>
+                        ))}
                     </Card.Body>
                 </Card>
             </Col>

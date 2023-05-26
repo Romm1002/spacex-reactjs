@@ -5,23 +5,63 @@
             "title": "Quiz 1",
             "questions": [
                 {
-                    "question": "Quelle est la plus grande planète du système solaire ?",
-                    "options": ["Mars", "Jupiter", "Saturne", "Vénus"],
+                    "question": "What is the largest planet in the solar system?",
+                    "options": ["Mars", "Jupiter", "Saturn", "Venus"],
                     "correctAnswer": "Jupiter"
                 },
                 {
-                    "question": "Quel est le nom de notre galaxie ?",
-                    "options": ["Andromède", "Voie lactée", "Sombrero", "Bague"],
-                    "correctAnswer": "Voie lactée"
+                    "question": "What is the name of our galaxy?",
+                    "options": ["Andromeda", "Milky Way", "Sombrero", "Ring"],
+                    "correctAnswer": "Milky Way"
                 },
                 {
-                    "question": "Quelle est la distance entre la Terre et la Lune ?",
-                    "options": ["384 400 km", "1 année lumière", "59 024 km", "589 472km"],
-                    "correctAnswer": "384 400km"
+                    "question": "How far is the Earth from the Moon?",
+                    "options": ["384 400 km", "1 light year", "59 024 km", "589 472 km"],
+                    "correctAnswer": "384 400 km"
                 },
                 {
-                    "question": "Quelle est la planète du système solaire la plus proche du Soleil ?",
-                    "options": ["Mars", "Mercure", "Pluton", "Jupiter"],
+                    "question": "Which planet in the solar system is closest to the Sun?",
+                    "options": ["Mars", "Mercury", "Pluto", "Jupiter"],
+                    "correctAnswer": "Mercure"
+                },
+                {
+                    "question": "What is a shooting star?",
+                    "options": [
+                        "A star that shines brightly",
+                        "An asteroid on fire",
+                        "A dying star",
+                        "An atmospheric phenomenon"
+                    ],
+                    "correctAnswer": "An asteroid on fire"
+                },
+                {
+                    "question": "What is Jupiter's largest moon?",
+                    "options": ["Europe", "Io", "Ganymede", "Callisto"],
+                    "correctAnswer": "Ganymede"
+                },
+                {
+                    "question": "What is a nebula?",
+                    "options": [
+                        "A type of stellar explosion",
+                        "A star formation",
+                        "A group of planets",
+                        "An interstellar cloud"
+                    ],
+                    "correctAnswer": "An interstellar cloud"
+                },
+                {
+                    "question": "Which planet is closest to Earth?",
+                    "options": ["Venus", "Mars", "Mercury", "Jupiter"],
+                    "correctAnswer": "Venus"
+                },
+                {
+                    "question": "What is the Earth's period of revolution around the Sun?",
+                    "options": ["365 days", "24 hours", "30 days", "12 months"],
+                    "correctAnswer": "365 days"
+                },
+                {
+                    "question": "What is the smallest planet in the solar system?",
+                    "options": ["Mars", "Mercury", "Venus", "Pluto"],
                     "correctAnswer": "Mercure"
                 }
             ]
@@ -31,34 +71,74 @@
             "title": "Quiz 2",
             "questions": [
                 {
-                    "question": "Quelle est la première personne à avoir marché sur la Lune ?",
+                    "question": "Who was the first person to walk on the Moon?",
                     "options": ["Neil Armstrong", "Buzz Aldrin", "Yuri Gagarin", "Alan Shepard"],
                     "correctAnswer": "Neil Armstrong"
                 },
                 {
-                    "question": "Quelle est la durée d'une journée sur Mars ?",
+                    "question": "How long is a day on Mars?",
                     "options": [
-                        "23 heures 56 minutes",
+                        "23 hours 56 minutes",
                         "24 heures",
-                        "24 heures 39 minutes",
-                        "25 heures 37 minutes"
+                        "24 hours 39 minutes",
+                        "25 hours 37 minutes"
                     ],
-                    "correctAnswer": "24 heures 39 minutes"
+                    "correctAnswer": "24 hours 39 minutes"
                 },
                 {
-                    "question": "Comment s'appelle le premier astonaute français à s'être rendu sur l'ISS ?",
+                    "question": "What is the name of the first French astronaut to visit the ISS?",
                     "options": [
                         "Kyllian Mbappé",
                         "Jean Dujardin",
                         "Corentin Maille",
-                        "Thomas Pesquer"
+                        "Thomas Pesquet"
                     ],
-                    "correctAnswer": "Thomas Pesquer"
+                    "correctAnswer": "Thomas Pesquet"
                 },
                 {
-                    "question": "Elon Musk est également le créateur de ?",
+                    "question": "Elon Musk is also the creator of ?",
                     "options": ["Kiabi", "PayPal", "Coca-Cola", "Lenovo"],
                     "correctAnswer": "PayPal"
+                },
+                {
+                    "question": "What is the average distance between the Earth and the Sun?",
+                    "options": ["150 000 km", "150 000 000 km", "150 000 000 000 km", "150 km"],
+                    "correctAnswer": "150 000 000 km"
+                },
+                {
+                    "question": "What is the furthest planet from the Sun in our solar system?",
+                    "options": ["Uranus", "Neptune", "Pluto", "Saturn"],
+                    "correctAnswer": "Neptune"
+                },
+                {
+                    "question": "What is the name of the first American woman astronaut to travel in space?",
+                    "options": [
+                        "Valentina Tereshkova",
+                        "Sally Ride",
+                        "Mae Jemison",
+                        "Peggy Whitson"
+                    ],
+                    "correctAnswer": "Sally Ride"
+                },
+                {
+                    "question": "How long is a year on Uranus?",
+                    "options": ["365 days", "84 years", "29 years", "10,000 years"],
+                    "correctAnswer": "84 years old"
+                },
+                {
+                    "question": "What is a supernova?",
+                    "options": [
+                        "A type of galaxy",
+                        "An exploding star at the end of its life",
+                        "A planet with a dense atmosphere",
+                        "A black hole"
+                    ],
+                    "correctAnswer": "An exploding star at the end of its life"
+                },
+                {
+                    "question": "Which planet is closest to the asteroid belt?",
+                    "options": ["Mercury", "Venus", "Earth", "Mars"],
+                    "correctAnswer": "Mars"
                 }
             ]
         },
@@ -67,24 +147,64 @@
             "title": "Quiz 3",
             "questions": [
                 {
-                    "question": "Quelle est la première sonde à avoir atteint la Lune ?",
+                    "question": "What was the first probe to reach the Moon?",
                     "options": ["Lunar Orbiter 1", "Apollo 11", "Pioneer 4", "Luna 2"],
                     "correctAnswer": "Luna 2"
                 },
                 {
-                    "question": "Quel est le plus grand satellite naturel de la Terre ?",
+                    "question": "What is the Earth's largest natural satellite?",
                     "options": ["Phobos", "Titan", "Lune", "Europa"],
                     "correctAnswer": "Lune"
                 },
                 {
-                    "question": "Quel est le plus grand volcan connu dans le système solaire ?",
+                    "question": "What is the largest known volcano in the solar system?",
                     "options": ["Mauna Loa", "Olympus Mons", "Mount Everest", "Vesuvius"],
                     "correctAnswer": "Olympus Mons"
                 },
                 {
-                    "question": "Quel est le premier animal à avoir été envoyé dans l'espace ?",
-                    "options": ["Chimpanzé", "Chien", "Singe", "Souris"],
-                    "correctAnswer": "Chien"
+                    "question": "What was the first animal to be sent into space?",
+                    "options": ["Chimpanzee", "Dog", "Monkey", "Mouse"],
+                    "correctAnswer": "Dog"
+                },
+                {
+                    "question": "What is the average distance between the Earth and the Sun?",
+                    "options": ["150 000 km", "150 000 000 km", "150 000 000 000 km", "150 km"],
+                    "correctAnswer": "150 000 000 km"
+                },
+                {
+                    "question": "What is the furthest planet from the Sun in our solar system?",
+                    "options": ["Uranus", "Neptune", "Pluto", "Saturn"],
+                    "correctAnswer": "Neptune"
+                },
+                {
+                    "question": "What is the name of the first American woman astronaut to travel in space?",
+                    "options": [
+                        "Valentina Tereshkova",
+                        "Sally Ride",
+                        "Mae Jemison",
+                        "Peggy Whitson"
+                    ],
+                    "correctAnswer": "Sally Ride"
+                },
+                {
+                    "question": "How long is a year on Uranus?",
+                    "options": ["365 days", "84 years", "29 years", "10,000 years"],
+                    "correctAnswer": "84 years old"
+                },
+                {
+                    "question": "What is a supernova?",
+                    "options": [
+                        "A type of galaxy",
+                        "An exploding star at the end of its life",
+                        "A planet with a dense atmosphere",
+                        "A black hole"
+                    ],
+                    "correctAnswer": "An exploding star at the end of its life"
+                },
+                {
+                    "question": "Which planet is closest to the asteroid belt?",
+                    "options": ["Mercury", "Venus", "Earth", "Mars"],
+                    "correctAnswer": "Mars"
                 }
             ]
         },
@@ -93,17 +213,17 @@
             "title": "Quiz 4",
             "questions": [
                 {
-                    "question": "Quelle planète est souvent appelée la 'planète rouge' ?",
-                    "options": ["Mars", "Vénus", "Jupiter", "Saturne"],
+                    "question": "Which planet is often referred to as the 'red planet'?",
+                    "options": ["Mars", "Venus", "Jupiter", "Saturn"],
                     "correctAnswer": "Mars"
                 },
                 {
-                    "question": "Quelle est la plus grande lune de Saturne ?",
+                    "question": "What is Saturn's largest moon?",
                     "options": ["Titan", "Encelade", "Europe", "Io"],
-                    "correctAnswer": "Lune"
+                    "correctAnswer": "Titan"
                 },
                 {
-                    "question": "Quel est le nom de la première femme astronaute à voyager dans l'espace ?",
+                    "question": "What is the name of the first female astronaut to travel in space?",
                     "options": [
                         "Valentina Tereshkova",
                         "Sally Ride",
@@ -113,9 +233,39 @@
                     "correctAnswer": "Valentina Tereshkova"
                 },
                 {
-                    "question": "Quel est le premier animal à avoir été envoyé dans l'espace ?",
-                    "options": ["Chimpanzé", "Chien", "Singe", "Souris"],
-                    "correctAnswer": "Chien"
+                    "question": "How long is a day on Venus?",
+                    "options": ["24 hours", "243 terrestrial days", "365 days", "12 hours"],
+                    "correctAnswer": "243 terrestrial days"
+                },
+                {
+                    "question": "What is the largest planet in the solar system?",
+                    "options": ["Mars", "Jupiter", "Saturn", "Venus"],
+                    "correctAnswer": "Jupiter"
+                },
+                {
+                    "question": "What was the first space mission to reach Pluto?",
+                    "options": ["Voyager 1", "New Horizons", "Cassini-Huygens", "Curiosity"],
+                    "correctAnswer": "New Horizons"
+                },
+                {
+                    "question": "What is the main composition of the atmosphere of Titan, Saturn's largest moon?",
+                    "options": ["Oxygen", "Nitrogen", "Methane", "Hydrogen"],
+                    "correctAnswer": "Nitrogen"
+                },
+                {
+                    "question": "What is the largest known asteroid in our solar system?",
+                    "options": ["Vesta", "Ceres", "Eros", "Apophis"],
+                    "correctAnswer": "Cérès"
+                },
+                {
+                    "question": "What is the name of the NASA mission that sent humans to the Moon for the first time in 1969?",
+                    "options": ["Apollo 11", "Gemini 7", "Mercury 3", "Voyager 2"],
+                    "correctAnswer": "Apollo 11"
+                },
+                {
+                    "question": "What is the average distance between Earth and Mars?",
+                    "options": ["55 million km", "150 million km", "384,400 km", "1 year of light"],
+                    "correctAnswer": "150 million km"
                 }
             ]
         }

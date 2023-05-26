@@ -8,8 +8,6 @@ function App() {
     const [response, setResponse] = useState(null)
     const [error, setError] = useState(null)
 
-
-
     return (
         <ApiContext.Provider value={{ response, error, setResponse, setError }}>
             <Routeur />
