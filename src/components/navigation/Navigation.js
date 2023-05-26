@@ -43,7 +43,7 @@ const Navigation = () => {
                                 History
                             </Link>
                         </li>
-                        <li class='nav-item'>
+                        <li className='nav-item'>
                             <Link to='/roadster' className='nav-link' aria-current='page'>
                                 Roadster
                             </Link>

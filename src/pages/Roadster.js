@@ -5,12 +5,12 @@ import { FormatDate, FormatDistance } from '../utils/FormatDate'
 import VideoPlayer from '../utils/VideoPlayer'
 import InformationRoadster from '../components/InformationRoadster'
 import Error from '../error/Error'
-import ApiContext from '../utils/ApiContext';
+import ApiContext from '../utils/ApiContext'
 
 const Roadster = () => {
     const AU = 149600000
 
-    const { response, error } = useContext(ApiContext);
+    const { response, error } = useContext(ApiContext)
 
     let formattedSpeed
     let formattedWeight
