@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { Button } from 'react-bootstrap'
 import FormatDate from '../utils/FormatDate'
 import HttpClient from '../components/HttpClient'
+import Error from '../error/Error'
 
 const History = () => {
     const { id } = useParams()
@@ -29,6 +30,12 @@ const History = () => {
                 endpoint={`history/${id}`}
             />
 
+            {error && (
+                <>
+                    <Error error={error} />
+                </>
+            )}
+
             {response && (
                 <>
                     <Link to='/history'>
@@ -36,7 +43,7 @@ const History = () => {
                             <Button variant='secondary'>Retour</Button>
                         </div>
                     </Link>
-                    <div className='App-history'>
+                    <div>
                         <h1 className='mt-5'>{response.title}</h1>
 
                         <h5 className='mt-5'>{response.details}</h5>

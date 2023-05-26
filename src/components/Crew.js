@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import CrewSearch from './CrewSearch'
 import Card from 'react-bootstrap/Card'
 import HttpClient from './HttpClient'
+import Error from '../error/Error'
 
 const CrewComponent = () => {
     // eslint-disable-next-line
@@ -44,6 +45,13 @@ const CrewComponent = () => {
                 errorCallBack={setError}
                 endpoint='crew'
             />
+
+            {error && (
+                <>
+                    <Error error={error} />
+                </>
+            )}
+
             {response && (
                 <div>
                     <div className='d-flex align-items-center justify-content-between my-4'>

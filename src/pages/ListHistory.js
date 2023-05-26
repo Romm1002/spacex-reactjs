@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import CardHistory from '../components/CardHistory'
 import { Row } from 'react-bootstrap'
 import HttpClient from '../components/HttpClient'
-// Recupérer l'api
+import Error from '../error/Error'
 
 const ListHistory = () => {
     /** -------------- HTTP CLIENT -------------- **/
@@ -27,7 +27,13 @@ const ListHistory = () => {
                     endpoint='history'
                 />
 
-                <div className='App-history mt-5'>
+                {error && (
+                    <>
+                        <Error error={error} />
+                    </>
+                )}
+
+                <div className='mt-5'>
                     <h1>History of Space X</h1>
                     <div className='container mt-5'>
                         <Row>
