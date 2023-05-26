@@ -34,9 +34,7 @@ const CrewComponent = () => {
 
     return (
         <>
-            <HttpClient
-                endpoint='crew'
-            />
+            <HttpClient endpoint='crew' />
 
             {error && (
                 <>

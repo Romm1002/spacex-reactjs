@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
@@ -16,9 +16,7 @@ const RocketsDetails = () => {
 
     return (
         <>
-            <HttpClient
-                endpoint={`rockets/${id}`}
-            />
+            <HttpClient endpoint={`rockets/${id}`} />
 
             {error && (
                 <>

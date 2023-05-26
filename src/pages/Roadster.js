@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React, { useContext } from 'react'
 import HttpClient from '../components/HttpClient'
 import { Card, Carousel, Container } from 'react-bootstrap'
@@ -12,7 +13,6 @@ const Roadster = () => {
 
     const { response, error } = useContext(ApiContext)
 
-    
     console.log(response)
 
     let formattedSpeed

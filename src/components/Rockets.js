@@ -8,14 +8,11 @@ import Error from '../error/Error'
 import ApiContext from '../utils/ApiContext'
 
 const Rockets = () => {
-
     const { response, error, reset } = useContext(ApiContext)
 
     return (
         <>
-            <HttpClient
-                endpoint='rockets'
-            />
+            <HttpClient endpoint='rockets' />
 
             {error && (
                 <>
